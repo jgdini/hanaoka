@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Área do Editor — Login | Blog Hanaoka</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23041c26'/%3E%3Cpath d='M16 6c4 6 8 10.5 8 14.5A8 8 0 1 1 8 20.5C8 16.5 12 12 16 6Z' fill='%232fa3d1'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&amp;family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img class="brand__logo-img" src="https://hanaoka.com.br/wp-content/uploads/2025/06/logotipo.webp" alt="Hanaoka Soluções Químicas" width="142" height="35">
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <span class="brand__tagline" style="color: var(--aqua-300);">Área do editor</span>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container" style="max-width: 640px;">
+
+      <div class="proto-notice reveal" style="margin-bottom: var(--sp-8);">
+        <span aria-hidden="true">ℹ️</span>
+        <span><strong>Protótipo de demonstração.</strong> Este login roda inteiramente no navegador — não é um sistema seguro nem multiusuário. Serve para mostrar a experiência de edição do blog. Na versão final, após a migração para WordPress, a edição terá login seguro de verdade (wp-admin), com posts salvos no servidor e visíveis para todos os visitantes.</span>
+      </div>
+
+      <div class="login-card reveal">
+        <h1>Entrar no editor</h1>
+        <p>Acesse para criar, editar ou remover posts do blog.</p>
+        <form id="login-form">
+          <div class="field">
+            <label for="login-user">Usuário</label>
+            <input id="login-user" type="text" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="login-pass">Senha</label>
+            <input id="login-pass" type="password" autocomplete="current-password" required>
+          </div>
+          <p class="login-card__error" id="login-error">Usuário ou senha incorretos.</p>
+          <button class="btn btn--reagent" type="submit">Entrar</button>
+        </form>
+        <p class="login-card__hint">Demo — usuário: <strong>admin</strong> · senha: <strong>hanaoka2026</strong></p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>Hanaoka Soluções Químicas © 2026. Todos os direitos reservados.</span>
+      <span><a href="blog.html">← Voltar ao blog</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/blog-store.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.getElementById("login-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var user = document.getElementById("login-user").value.trim();
+    var pass = document.getElementById("login-pass").value;
+    var errorEl = document.getElementById("login-error");
+    if (window.HanaokaBlog.login(user, pass)) {
+      window.location.href = "blog-admin.html";
+    } else {
+      errorEl.classList.add("is-visible");
+    }
+  });
+</script>
+</body>
+</html>

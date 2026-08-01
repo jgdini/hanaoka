@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editor do Blog | Hanaoka Soluções Químicas</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23041c26'/%3E%3Cpath d='M16 6c4 6 8 10.5 8 14.5A8 8 0 1 1 8 20.5C8 16.5 12 12 16 6Z' fill='%232fa3d1'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&amp;family=Manrope:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="admin-bar">
+  <span>✎ Editor do Blog — Hanaoka <em style="color: var(--reagent-400); font-style: normal;">(protótipo)</em></span>
+  <span>
+    <a href="blog.html">Ver blog público →</a>
+    &nbsp;·&nbsp;
+    <button type="button" id="admin-logout-btn" style="background:none;border:none;color:var(--aqua-300);cursor:pointer;font:inherit;padding:0;">Sair</button>
+  </span>
+</div>
+
+<main id="main">
+  <section class="section" style="padding-top: var(--sp-12);">
+    <div class="container">
+
+      <div class="proto-notice reveal" style="margin-bottom: var(--sp-8);">
+        <span aria-hidden="true">ℹ️</span>
+        <span><strong>Protótipo de demonstração.</strong> Os posts que você criar ou editar aqui ficam salvos apenas neste navegador (localStorage) — outros visitantes do site não verão essas mudanças. Não há senha segura de verdade. A edição real e multiusuário chega com a migração para WordPress.</span>
+      </div>
+
+      <div class="admin-layout">
+
+        <div class="admin-panel reveal">
+          <h2>Posts publicados</h2>
+          <div id="admin-post-list" class="admin-post-list"></div>
+          <button class="btn btn--ghost-light" type="button" id="admin-new-btn" style="margin-top: var(--sp-6);">+ Novo post</button>
+        </div>
+
+        <div class="admin-panel reveal">
+          <h2 id="admin-form-title">Novo post</h2>
+          <form id="admin-form" style="display: grid; gap: var(--sp-4);">
+            <input type="hidden" id="f-slug">
+            <div class="field">
+              <label for="f-title">Título</label>
+              <input id="f-title" type="text" required>
+            </div>
+            <div class="field">
+              <label for="f-category">Categoria</label>
+              <input id="f-category" type="text" placeholder="Produtos, Segurança, Institucional...">
+            </div>
+            <div class="field">
+              <label for="f-date">Data</label>
+              <input id="f-date" type="date">
+            </div>
+            <div class="field">
+              <label for="f-image">Imagem de capa (URL, opcional)</label>
+              <input id="f-image" type="url" placeholder="https://...">
+            </div>
+            <div class="field">
+              <label for="f-excerpt">Resumo</label>
+              <textarea id="f-excerpt" style="min-height: 70px;" required></textarea>
+            </div>
+            <div class="field">
+              <label for="f-body">Corpo do post (separe parágrafos com uma linha em branco)</label>
+              <textarea id="f-body" style="min-height: 220px;" required></textarea>
+            </div>
+            <button class="btn btn--reagent" type="submit">Salvar post</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>Hanaoka Soluções Químicas © 2026. Todos os direitos reservados.</span>
+      <span><a href="blog.html">← Voltar ao blog</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/blog-store.js"></script>
+<script src="assets/js/blog-admin.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
