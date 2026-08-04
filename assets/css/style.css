@@ -496,6 +496,96 @@ sub { font-size: 0.7em; }
   .stat-quote { grid-template-columns: 1fr; text-align: left; padding: var(--sp-8); }
 }
 
+/* ---- Proof grid: prova de credibilidade, não afirmação — números que linkam pra evidência ---- */
+.proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-6); }
+.proof-card {
+  display: block;
+  background: var(--paper-0);
+  border: 1px solid var(--paper-200);
+  border-top: 3px solid var(--aqua-500);
+  border-radius: var(--radius-md);
+  padding: var(--sp-8) var(--sp-6);
+  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.proof-card:hover { transform: translateY(-3px); border-top-color: var(--reagent-500); box-shadow: 0 14px 30px rgba(10, 66, 88, 0.12); }
+.proof-card__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 2vw + 1rem, 2.5rem);
+  font-weight: 600;
+  color: var(--petrol-700);
+}
+.proof-card__label { display: block; margin-top: var(--sp-2); font-weight: 700; font-size: 0.95rem; }
+.proof-card__desc { display: block; margin-top: var(--sp-3); font-size: 0.85rem; color: var(--ink-500); }
+@media (max-width: 860px) { .proof-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .proof-grid { grid-template-columns: 1fr; } }
+
+/* ---- Priority product cards (home) ---- */
+.priority-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); }
+.priority-card {
+  display: block;
+  background: var(--paper-0);
+  border: 1px solid var(--paper-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.priority-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(10, 66, 88, 0.14); }
+.priority-card__formula-band {
+  background: linear-gradient(155deg, var(--petrol-800), var(--petrol-600));
+  color: var(--paper-0);
+  padding: var(--sp-8) var(--sp-6);
+  text-align: center;
+}
+.priority-card__formula { font-family: var(--font-mono); font-size: 2.1rem; font-weight: 500; }
+.priority-card__grade { display: block; margin-top: var(--sp-2); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--aqua-300); text-transform: uppercase; }
+.priority-card__body { padding: var(--sp-6); }
+.priority-card__name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+.priority-card__desc { margin-top: var(--sp-2); font-size: 0.88rem; color: var(--ink-500); }
+.priority-card__link { display: inline-flex; align-items: center; gap: var(--sp-2); margin-top: var(--sp-4); font-weight: 700; font-size: 0.85rem; color: var(--petrol-700); }
+.priority-card:hover .priority-card__link { color: var(--aqua-500); }
+@media (max-width: 860px) { .priority-grid { grid-template-columns: 1fr; } }
+
+/* ---- PureLab teaser band ---- */
+.purelab-band {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--sp-8);
+  background: var(--petrol-900);
+  color: var(--paper-0);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-10) var(--sp-10);
+}
+.purelab-band__mark { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--aqua-300); border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: var(--sp-2) var(--sp-4); white-space: nowrap; }
+.purelab-band__body h2 { font-family: var(--font-display); font-size: var(--fs-h2); color: var(--paper-0); }
+.purelab-band__body p { margin-top: var(--sp-3); color: rgba(255,255,255,.72); max-width: 46ch; }
+@media (max-width: 860px) {
+  .purelab-band { grid-template-columns: 1fr; text-align: left; }
+}
+
+/* ---- Product page: identity strip, spec table, FAQ ---- */
+.product-identity { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+.product-identity__item { background: var(--paper-100); border-radius: var(--radius-sm); padding: var(--sp-3) var(--sp-5); }
+.product-identity__label { display: block; font-family: var(--font-mono); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--aqua-500); }
+.product-identity__value { display: block; font-weight: 700; margin-top: 2px; }
+
+.spec-table { width: 100%; border-collapse: collapse; }
+.spec-table th, .spec-table td { text-align: left; padding: var(--sp-4); border-bottom: 1px solid var(--paper-200); font-size: 0.92rem; }
+.spec-table th { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-500); font-weight: 500; }
+.spec-table td:first-child { font-weight: 700; color: var(--ink-900); width: 42%; }
+.spec-note { margin-top: var(--sp-4); font-size: 0.82rem; color: var(--ink-500); font-style: italic; }
+
+.role-note { background: var(--paper-100); border-left: 3px solid var(--reagent-500); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: var(--sp-4) var(--sp-5); font-size: 0.86rem; color: var(--ink-500); }
+
+.faq-list { display: grid; }
+.faq-item { border-bottom: 1px solid var(--paper-200); padding-block: var(--sp-5); }
+.faq-item__q { font-weight: 700; font-size: 1rem; display: flex; gap: var(--sp-3); }
+.faq-item__q::before { content: "P."; color: var(--aqua-500); font-family: var(--font-mono); flex-shrink: 0; }
+.faq-item__a { color: var(--ink-500); font-size: 0.92rem; margin-top: var(--sp-2); padding-left: calc(1ch + var(--sp-3)); }
+
+.product-cta-row { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+
 /* ==========================================================================
    Product index — lista técnica, não grid de cards
    ========================================================================== */
@@ -801,10 +891,13 @@ sub { font-size: 0.7em; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1fr;
-  gap: var(--sp-8);
+  grid-template-columns: 1.2fr 0.9fr 0.9fr 1fr 1fr;
+  gap: var(--sp-6);
   padding-bottom: var(--sp-12);
   border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+@media (max-width: 980px) {
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 .footer-grid h4 {
   font-family: var(--font-mono);

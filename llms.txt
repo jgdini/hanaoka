@@ -10,6 +10,14 @@ Fundada por Jorge Hanaoka, antes chamada Micro-Química.
 - [Produtos](https://hanaoka.com.br/produtos.html): catálogo completo de ácidos, sais e reagentes de alta pureza.
 - [FDS](https://hanaoka.com.br/fds.html): Fichas de Dados de Segurança por produto.
 - [Sustentabilidade](https://hanaoka.com.br/sustentabilidade.html): iniciativas de descarbonização, eficiência energética e ODS.
+- [Laboratório](https://hanaoka.com.br/laboratorio.html): controle de qualidade por lote, ensaios PA/ACS e desenvolvimento de produtos.
+- [Qualidade](https://hanaoka.com.br/qualidade.html): política de qualidade, Sistema de Gestão Integrada e rastreabilidade.
+- [Logística](https://hanaoka.com.br/logistica.html): frota própria, licença LETPP e cobertura de entrega.
+- [Certificações](https://hanaoka.com.br/certificacoes.html): ISO 9001, ISO 14001, EcoVadis e demais prêmios e reconhecimentos.
+- [Hanaoka PureLab](https://hanaoka.com.br/purelab.html): linha de reagentes de alta pureza para laboratórios.
+- [Ácido Nítrico PA 65%](https://hanaoka.com.br/acido-nitrico-pa-65.html): fabricado e diluído no Brasil, CAS 7697-37-2.
+- [Ácido Sulfúrico PA-ACS](https://hanaoka.com.br/acido-sulfurico-pa-acs.html): grau American Chemical Society, CAS 7664-93-9.
+- [Ácido Clorídrico PA](https://hanaoka.com.br/acido-cloridrico-pa.html): alta pureza para análises e processos, CAS 7647-01-0.
 - [Blog](https://hanaoka.com.br/blog.html): conteúdo sobre produtos, segurança industrial e sustentabilidade.
 - [Contato](https://hanaoka.com.br/contato.html) / [Solicitar Orçamento](https://hanaoka.com.br/orcamento.html)
 

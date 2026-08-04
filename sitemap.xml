@@ -31,6 +31,46 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hanaoka.com.br/laboratorio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hanaoka.com.br/qualidade.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hanaoka.com.br/logistica.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hanaoka.com.br/certificacoes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hanaoka.com.br/acido-nitrico-pa-65.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hanaoka.com.br/acido-sulfurico-pa-acs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hanaoka.com.br/acido-cloridrico-pa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hanaoka.com.br/purelab.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://hanaoka.com.br/contato.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

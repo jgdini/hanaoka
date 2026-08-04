@@ -13,6 +13,35 @@
 
   var SEED_POSTS = [
     {
+      slug: "quem-fabrica-acido-nitrico-pa-65-no-brasil",
+      title: "Quem fabrica Ácido Nítrico PA 65% no Brasil?",
+      category: "Produtos",
+      date: "2026-08-01",
+      image: "https://hanaoka.com.br/wp-content/uploads/2025/06/Banner-Principal-Hanoka.webp",
+      excerpt: "Poucas empresas no Brasil fabricam e diluem Ácido Nítrico grau PA 65% com controle analítico próprio. Entenda o que diferencia um fabricante de um simples revendedor.",
+      body: [
+        "Encontrar um fabricante nacional de Ácido Nítrico grau PA 65% — e não apenas um distribuidor — é decisivo para quem depende de consistência de lote a lote em processos analíticos e industriais.",
+        "A Hanaoka Soluções Químicas fabrica e dilui o Ácido Nítrico PA 65% sob especificação do cliente, com controle de qualidade em laboratório próprio antes da liberação de cada lote.",
+        "Isso significa rastreabilidade documentada, certificado de análise disponível e um único ponto de contato — da produção à entrega — sem depender de intermediários que apenas revendem o produto de terceiros.",
+        "Para especificações completas, consulte a página do produto: Ácido Nítrico PA 65%."
+      ]
+    },
+    {
+      slug: "diferenca-entre-grau-tecnico-pa-e-acs",
+      title: "Diferença entre grau técnico, PA e ACS",
+      category: "Produtos",
+      date: "2026-07-15",
+      image: "",
+      excerpt: "Técnico, PA e ACS não são apenas rótulos — cada grau representa um nível diferente de controle analítico. Entenda qual é o adequado para o seu processo.",
+      body: [
+        "Nem todo ácido é igual, mesmo quando a fórmula química é a mesma. O grau de pureza determina onde e como um reagente pode ser usado com segurança e confiabilidade de resultado.",
+        "O grau técnico é indicado para processos industriais gerais, onde pequenas variações de pureza não comprometem o resultado final — como decapagem de metais ou tratamento de efluentes.",
+        "O grau PA (Para Análise) tem controle analítico mais rigoroso, com baixos níveis de contaminantes, sendo indicado para laboratórios e processos que exigem reprodutibilidade.",
+        "Já o grau PA-ACS atende às especificações da American Chemical Society, o padrão mais exigente, usado em análises de altíssima precisão e pesquisa.",
+        "Na Hanaoka, cada grau é fabricado e diluído sob especificação, com análise em laboratório próprio antes da liberação — garantindo que o produto entregue corresponda exatamente ao grau declarado."
+      ]
+    },
+    {
       slug: "o-que-e-acido-sulfurico",
       title: "O que é o Ácido Sulfúrico?",
       category: "Produtos",
