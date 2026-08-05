@@ -19,7 +19,11 @@ Fundada por Jorge Hanaoka, antes chamada Micro-Química.
 - [Ácido Sulfúrico PA-ACS](https://hanaoka.com.br/acido-sulfurico-pa-acs.html): grau American Chemical Society, CAS 7664-93-9.
 - [Ácido Clorídrico PA](https://hanaoka.com.br/acido-cloridrico-pa.html): alta pureza para análises e processos, CAS 7647-01-0.
 - [Blog](https://hanaoka.com.br/blog.html): conteúdo sobre produtos, segurança industrial e sustentabilidade.
+- [Perguntas Frequentes](https://hanaoka.com.br/perguntas-frequentes.html): respostas diretas sobre fabricação, localização e certificação.
 - [Contato](https://hanaoka.com.br/contato.html) / [Solicitar Orçamento](https://hanaoka.com.br/orcamento.html)
+
+## Catálogo estruturado
+- [catalogo.json](https://hanaoka.com.br/catalogo.json) / [catalogo.csv](https://hanaoka.com.br/catalogo.csv): dados legíveis por máquina dos reagentes prioritários (fórmula, CAS, grau, concentração, URL).
 
 ## Contato
 - E-mail: contato@hanaoka.com.br

@@ -1,0 +1,38 @@
+{
+  "manufacturer": "Hanaoka Soluções Químicas",
+  "manufacturerUrl": "https://hanaoka.com.br/",
+  "country": "Brasil",
+  "city": "Cotia",
+  "state": "São Paulo",
+  "lastUpdated": "2026-08-05",
+  "products": [
+    {
+      "product": "Ácido Nítrico PA 65%",
+      "formula": "HNO3",
+      "cas": "7697-37-2",
+      "grade": "PA",
+      "concentration": "65%",
+      "role": "a_confirmar",
+      "url": "https://hanaoka.com.br/acido-nitrico-pa-65.html"
+    },
+    {
+      "product": "Ácido Sulfúrico PA-ACS",
+      "formula": "H2SO4",
+      "cas": "7664-93-9",
+      "grade": "PA-ACS",
+      "concentration": "98%",
+      "role": "a_confirmar",
+      "url": "https://hanaoka.com.br/acido-sulfurico-pa-acs.html"
+    },
+    {
+      "product": "Ácido Clorídrico PA",
+      "formula": "HCl",
+      "cas": "7647-01-0",
+      "grade": "PA",
+      "concentration": "a_confirmar",
+      "role": "a_confirmar",
+      "url": "https://hanaoka.com.br/acido-cloridrico-pa.html"
+    }
+  ],
+  "note": "Catálogo em fase piloto com os 3 reagentes prioritários. O campo \"role\" (fabricante/purificadora/diluidora/fracionadora/distribuidora) está marcado como \"a_confirmar\" até validação da Diretoria da Hanaoka."
+}

@@ -71,6 +71,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://hanaoka.com.br/perguntas-frequentes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hanaoka.com.br/contato.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
