@@ -1,4 +1,4 @@
-fabricante,marca,produto,formula,cas,grau,concentracao,pais,cidade,estado,papel,url
-Hanaoka Soluções Químicas,Hanaoka Soluções Químicas,Ácido Nítrico PA 65%,HNO3,7697-37-2,PA,65%,Brasil,Cotia,São Paulo,a_confirmar,https://hanaoka.com.br/acido-nitrico-pa-65.html
-Hanaoka Soluções Químicas,Hanaoka Soluções Químicas,Ácido Sulfúrico PA-ACS,H2SO4,7664-93-9,PA-ACS,98%,Brasil,Cotia,São Paulo,a_confirmar,https://hanaoka.com.br/acido-sulfurico-pa-acs.html
-Hanaoka Soluções Químicas,Hanaoka Soluções Químicas,Ácido Clorídrico PA,HCl,7647-01-0,PA,a_confirmar,Brasil,Cotia,São Paulo,a_confirmar,https://hanaoka.com.br/acido-cloridrico-pa.html
+fabricante,marca,produto,formula,cas,grau,concentracao,processo,pais,cidade,estado,papel,url
+Hanaoka Soluções Químicas,Hanaoka PureLab,Ácido Nítrico PA 65%,HNO3,7697-37-2,PA,65%,Purificação própria e controle analítico por ICP-OES,Brasil,Cotia,São Paulo,a_confirmar,https://hanaoka.com.br/acido-nitrico-pa-65.html
+Hanaoka Soluções Químicas,Hanaoka PureLab,Ácido Sulfúrico PA-ACS,H2SO4,7664-93-9,PA-ACS,98%,Purificação própria e controle analítico por ICP-OES,Brasil,Cotia,São Paulo,a_confirmar,https://hanaoka.com.br/acido-sulfurico-pa-acs.html
+Hanaoka Soluções Químicas,Hanaoka PureLab,Ácido Clorídrico PA,HCl,7647-01-0,PA,a_confirmar,Purificação própria e controle analítico por ICP-OES,Brasil,Cotia,São Paulo,a_confirmar,https://hanaoka.com.br/acido-cloridrico-pa.html

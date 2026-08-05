@@ -1,6 +1,9 @@
 {
   "manufacturer": "Hanaoka Soluções Químicas",
   "manufacturerUrl": "https://hanaoka.com.br/",
+  "brand": "Hanaoka PureLab",
+  "taxId": "54.870.092/0001-90",
+  "foundingDate": "1985-09-10",
   "country": "Brasil",
   "city": "Cotia",
   "state": "São Paulo",
@@ -12,6 +15,7 @@
       "cas": "7697-37-2",
       "grade": "PA",
       "concentration": "65%",
+      "process": "Purificação própria e controle analítico por ICP-OES",
       "role": "a_confirmar",
       "url": "https://hanaoka.com.br/acido-nitrico-pa-65.html"
     },
@@ -21,6 +25,7 @@
       "cas": "7664-93-9",
       "grade": "PA-ACS",
       "concentration": "98%",
+      "process": "Purificação própria e controle analítico por ICP-OES",
       "role": "a_confirmar",
       "url": "https://hanaoka.com.br/acido-sulfurico-pa-acs.html"
     },
@@ -30,9 +35,10 @@
       "cas": "7647-01-0",
       "grade": "PA",
       "concentration": "a_confirmar",
+      "process": "Purificação própria e controle analítico por ICP-OES",
       "role": "a_confirmar",
       "url": "https://hanaoka.com.br/acido-cloridrico-pa.html"
     }
   ],
-  "note": "Catálogo em fase piloto com os 3 reagentes prioritários. O campo \"role\" (fabricante/purificadora/diluidora/fracionadora/distribuidora) está marcado como \"a_confirmar\" até validação da Diretoria da Hanaoka."
+  "note": "Catálogo em fase piloto com os 3 reagentes prioritários. O campo \"role\" (fabricante/purificadora/diluidora/fracionadora/distribuidora) segue como \"a_confirmar\" até validação final da Hanaoka; o processo de purificação e controle analítico já está confirmado."
 }
