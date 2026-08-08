@@ -1338,3 +1338,60 @@ a.doc-row__action:active { transform: translateY(0); box-shadow: none; }
   text-transform: uppercase;
   color: var(--aqua-500);
 }
+
+/* ==========================================================================
+   Section--navy overrides — texto legível e componentes adaptados pro fundo escuro
+   ========================================================================== */
+.section--navy h2, .section--navy h3, .section--navy h4 { color: var(--paper-0); }
+.section--navy p { color: rgba(255, 255, 255, 0.72); }
+.section--navy .info-grid__item p { color: rgba(255, 255, 255, 0.68); }
+.section--navy .spec-note { color: rgba(255, 255, 255, 0.55); }
+.section--navy .role-note {
+  background: rgba(255, 255, 255, 0.06);
+  border-left-color: var(--aqua-500);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Ícones de química nos itens de destaque */
+.chem-icon-grid .info-grid__item { display: flex; flex-direction: column; gap: var(--sp-3); }
+.chem-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(47, 163, 209, 0.14);
+  flex-shrink: 0;
+}
+.section--navy .chem-icon { background: rgba(47, 163, 209, 0.18); }
+.chem-icon svg { width: 22px; height: 22px; stroke: var(--aqua-400); }
+
+/* Selos de certificação sobre fundo escuro — chips brancos, mais "chique" */
+.cert-badges {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-5);
+}
+@media (max-width: 780px) { .cert-badges { grid-template-columns: repeat(2, 1fr); } }
+.cert-badge {
+  background: var(--paper-0);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5) var(--sp-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 84px;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.cert-badge:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25); }
+.cert-badge img { max-height: 48px; max-width: 100%; width: auto; }
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-6) var(--sp-8);
+}
+@media (max-width: 780px) { .cert-grid { grid-template-columns: 1fr; } }
+.cert-grid__item h4 { font-size: 1rem; color: var(--paper-0); }
+.cert-grid__item p { margin-top: var(--sp-2); font-size: 0.88rem; color: rgba(255, 255, 255, 0.65); }
