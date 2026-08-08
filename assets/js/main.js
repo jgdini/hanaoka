@@ -98,6 +98,67 @@
     });
   }
 
+  /* ---- Brand gate: popup de entrada (Hanaoka x Hanaoka PureLab) ---- */
+  var brandGate = document.querySelector("[data-brand-gate]");
+  if (brandGate) {
+    var GATE_KEY = "hanaoka_brand_choice";
+    var dialog = brandGate.querySelector(".brand-gate__dialog");
+    var lastFocused = null;
+
+    var openGate = function () {
+      lastFocused = document.activeElement;
+      brandGate.classList.add("is-visible");
+      brandGate.setAttribute("aria-hidden", "false");
+      var firstOption = brandGate.querySelector(".brand-gate__option");
+      if (firstOption) firstOption.focus();
+      document.addEventListener("keydown", onKeydown);
+    };
+    var closeGate = function (choice) {
+      if (choice) {
+        try { sessionStorage.setItem(GATE_KEY, choice); } catch (e) {}
+      }
+      brandGate.classList.remove("is-visible");
+      brandGate.setAttribute("aria-hidden", "true");
+      document.removeEventListener("keydown", onKeydown);
+      if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+    };
+    var onKeydown = function (e) {
+      if (e.key === "Escape") { closeGate("hanaoka"); return; }
+      if (e.key === "Tab" && dialog) {
+        var focusables = dialog.querySelectorAll("button, a[href], [tabindex=\"0\"]");
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+
+    brandGate.querySelectorAll("[data-brand-choice]").forEach(function (el) {
+      var choose = function () {
+        var choice = el.getAttribute("data-brand-choice");
+        var href = el.getAttribute("data-href");
+        closeGate(choice);
+        if (href) window.location.href = href;
+      };
+      el.addEventListener("click", choose);
+      el.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); choose(); }
+      });
+    });
+    var closeBtn = brandGate.querySelector("[data-brand-close]");
+    if (closeBtn) closeBtn.addEventListener("click", function () { closeGate("hanaoka"); });
+    brandGate.addEventListener("click", function (e) {
+      if (e.target === brandGate) closeGate("hanaoka");
+    });
+
+    var already = null;
+    try { already = sessionStorage.getItem(GATE_KEY); } catch (e) {}
+    if (!already) {
+      window.setTimeout(openGate, 400);
+    }
+  }
+
   /* ---- Magnetic pull on primary CTAs ---- */
   if (!reduceMotion) {
     var magneticEls = document.querySelectorAll(".hero-split__actions .btn, .cta-strip .btn");

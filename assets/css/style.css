@@ -1221,3 +1221,120 @@ a.doc-row__action:active { transform: translateY(0); box-shadow: none; }
 @media (max-width: 780px) {
   .info-grid, .info-grid--3 { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   Brand gate — popup de entrada, escolha entre Hanaoka e Hanaoka PureLab
+   ========================================================================== */
+.brand-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-6);
+  background: rgba(4, 28, 38, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-med) var(--ease-out), visibility 0s linear var(--dur-med);
+}
+.brand-gate.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--dur-med) var(--ease-out), visibility 0s;
+}
+.brand-gate__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  background: var(--paper-0);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 40px 90px rgba(4, 28, 38, 0.35);
+  padding: var(--sp-10) var(--sp-8) var(--sp-8);
+  transform: translateY(14px) scale(0.98);
+  transition: transform var(--dur-med) var(--ease-out);
+}
+.brand-gate.is-visible .brand-gate__dialog { transform: translateY(0) scale(1); }
+@media (prefers-reduced-motion: reduce) {
+  .brand-gate, .brand-gate__dialog { transition: none; }
+}
+.brand-gate__close {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--paper-200);
+  background: var(--paper-0);
+  color: var(--ink-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
+}
+.brand-gate__close:hover { background: var(--paper-100); color: var(--petrol-900); }
+.brand-gate__head { text-align: center; margin-bottom: var(--sp-8); }
+.brand-gate__head .eyebrow { display: block; margin-bottom: var(--sp-2); }
+.brand-gate__head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  color: var(--petrol-900);
+}
+.brand-gate__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-5);
+}
+@media (max-width: 640px) {
+  .brand-gate__options { grid-template-columns: 1fr; }
+}
+.brand-gate__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-3);
+  padding: var(--sp-8) var(--sp-5);
+  border: 1px solid var(--paper-200);
+  border-radius: var(--radius-md);
+  background: var(--paper-50);
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+.brand-gate__option:hover, .brand-gate__option:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(10, 66, 88, 0.14);
+}
+.brand-gate__option--main:hover { border-color: var(--petrol-700); background: var(--paper-0); }
+.brand-gate__option--purelab:hover { border-color: var(--aqua-500); background: var(--paper-0); }
+.brand-gate__mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-gate__option--main .brand-gate__mark { background: var(--petrol-900); }
+.brand-gate__option--purelab .brand-gate__mark { background: linear-gradient(155deg, var(--aqua-500), var(--petrol-700)); }
+.brand-gate__mark svg { width: 26px; height: 26px; }
+.brand-gate__option-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--petrol-900);
+}
+.brand-gate__option-name em { font-style: italic; color: var(--aqua-500); }
+.brand-gate__option-desc { font-size: 0.86rem; color: var(--ink-500); max-width: 26ch; }
+.brand-gate__option-cta {
+  margin-top: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aqua-500);
+}

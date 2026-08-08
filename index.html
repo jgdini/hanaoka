@@ -52,6 +52,36 @@
 <body>
 <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
+<div class="brand-gate" data-brand-gate aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="brand-gate-title">
+  <div class="brand-gate__dialog">
+    <button class="brand-gate__close" data-brand-close aria-label="Fechar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="brand-gate__head">
+      <span class="eyebrow">Bem-vindo</span>
+      <h2 id="brand-gate-title">Deseja entrar na Hanaoka Soluções Químicas ou na Hanaoka PureLab Reagentes?</h2>
+    </div>
+    <div class="brand-gate__options">
+      <div class="brand-gate__option brand-gate__option--main" data-brand-choice="hanaoka" tabindex="0" role="button">
+        <span class="brand-gate__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.6"><path d="M9 2v6L5 15a3 3 0 0 0 3 4h8a3 3 0 0 0 3-4l-4-7V2"/><path d="M6 2h12" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-gate__option-name">Hanaoka Soluções Químicas</span>
+        <span class="brand-gate__option-desc">Ácidos e sais de alto grau de pureza para a indústria brasileira.</span>
+        <span class="brand-gate__option-cta">Continuar no site principal →</span>
+      </div>
+      <div class="brand-gate__option brand-gate__option--purelab" data-brand-choice="purelab" data-href="purelab.html" tabindex="0" role="button">
+        <span class="brand-gate__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.6"><path d="M12 2c3 4 7 8.5 7 12.5A7 7 0 1 1 5 14.5C5 10.5 9 6 12 2Z"/></svg>
+        </span>
+        <span class="brand-gate__option-name">Hanaoka <em>PureLab</em></span>
+        <span class="brand-gate__option-desc">Divisão de reagentes de alta pureza para laboratórios.</span>
+        <span class="brand-gate__option-cta">Ver reagentes PureLab →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="container">
     <a class="brand" href="index.html">
@@ -63,6 +93,7 @@
         <li><a href="sobre.html">Institucional</a></li>
         <li><a href="produtos.html">Produtos</a></li>
         <li><a href="fds.html">FDS</a></li>
+        <li><a href="purelab.html">Hanaoka PureLab</a></li>
         <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contato.html">Contato</a></li>
@@ -85,7 +116,7 @@
           <span class="eyebrow">Fabricante nacional desde 1985</span>
           <h1 class="hero-split__title">Fabricante brasileira de <em>alta pureza</em>.</h1>
           <div class="hero-split__rule" aria-hidden="true"></div>
-          <p class="hero-split__subtitle">Fabricamos e diluímos Ácido Nítrico PA 65%, Ácido Sulfúrico PA-ACS e Ácido Clorídrico PA sob especificação — com laboratório próprio, logística própria e rastreabilidade em cada lote. A confiança que a indústria química brasileira precisa.</p>
+          <p class="hero-split__subtitle">Fabricamos e diluímos Ácido Nítrico PA 65%, Ácido Sulfúrico PA-ACS e Ácido Clorídrico PA-ACS sob especificação — com laboratório próprio, logística própria e rastreabilidade em cada lote. A confiança que a indústria química brasileira precisa.</p>
           <div class="hero-split__actions">
             <a class="btn btn--reagent" href="orcamento.html">Solicitar orçamento</a>
             <a class="btn btn--ghost-light" href="produtos.html">Ver produtos</a>
@@ -153,10 +184,10 @@
         <a class="priority-card" href="acido-cloridrico-pa.html">
           <div class="priority-card__formula-band">
             <span class="priority-card__formula">HCl</span>
-            <span class="priority-card__grade">PA</span>
+            <span class="priority-card__grade">PA-ACS 37%</span>
           </div>
           <div class="priority-card__body">
-            <h3 class="priority-card__name">Ácido Clorídrico PA</h3>
+            <h3 class="priority-card__name">Ácido Clorídrico PA-ACS</h3>
             <p class="priority-card__desc">Alta pureza para análises, decapagem e controle de processo.</p>
             <span class="priority-card__link">Ver especificações completas →</span>
           </div>
@@ -266,7 +297,7 @@
             <span class="product-row__formula">HCl</span>
             <span class="product-row__text"><span class="product-row__name">Ácido Clorídrico</span><span class="product-row__desc">Alta pureza para processos industriais diversos.</span></span>
             <span class="product-row__arrow" aria-hidden="true">→</span>
-            <a class="product-row__link" href="acido-cloridrico-pa.html" aria-label="Ver Ácido Clorídrico PA"></a>
+            <a class="product-row__link" href="acido-cloridrico-pa.html" aria-label="Ver Ácido Clorídrico PA-ACS"></a>
           </div>
         </div>
 
