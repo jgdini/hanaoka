@@ -13,6 +13,64 @@
 
   var SEED_POSTS = [
     {
+      slug: "controle-de-metais-por-icp-oes",
+      title: "Controle de metais por ICP-OES: por que isso importa",
+      category: "Qualidade",
+      date: "2026-08-07",
+      image: "",
+      excerpt: "Um reagente pode parecer puro a olho nu e ainda assim conter contaminantes metálicos capazes de invalidar um resultado analítico. Entenda como o ICP-OES resolve isso.",
+      body: [
+        "Pureza declarada em rótulo e pureza comprovada em bancada nem sempre são a mesma coisa. Traços de metais — ferro, chumbo, cobre, zinco, entre outros — podem estar presentes em concentrações mínimas, invisíveis a olho nu, e ainda assim interferir de forma significativa em uma análise química sensível.",
+        "O ICP-OES (Espectrometria de Emissão Óptica com Plasma Indutivamente Acoplado) é uma das técnicas mais confiáveis para detectar e quantificar esses traços metálicos, com sensibilidade suficiente para identificar contaminantes na faixa de partes por bilhão.",
+        "Para reagentes de grau PA e PA-ACS, esse controle não é opcional: é o que garante que o produto realmente atenda à especificação declarada, e não apenas ao teor nominal do princípio ativo.",
+        "Na Hanaoka, o controle analítico por ICP-OES faz parte do processo de purificação própria dos reagentes prioritários, com verificação antes da liberação de cada lote — para que a pureza no papel corresponda à pureza real."
+      ]
+    },
+    {
+      slug: "acido-sulfurico-nacional-versus-importado",
+      title: "Ácido sulfúrico nacional versus importado: o que considerar",
+      category: "Produtos",
+      date: "2026-08-06",
+      image: "",
+      excerpt: "Comprar um reagente importado nem sempre significa mais qualidade — e quase sempre significa menos previsibilidade de prazo. Veja o que pesar antes de decidir.",
+      body: [
+        "É comum associar produto importado a maior qualidade, mas no caso de reagentes químicos de grau analítico essa equação não é tão simples. O que determina a qualidade real é o processo de purificação e controle — não a origem geográfica do rótulo.",
+        "Do lado prático, o ácido sulfúrico importado costuma trazer prazos de entrega mais longos, custos logísticos maiores, exposição a variação cambial e risco de desabastecimento em caso de atraso alfandegário — fatores que pesam especialmente quando o insumo é crítico para a linha de produção.",
+        "Um fabricante nacional com laboratório próprio e controle analítico documentado (por exemplo, por ICP-OES) pode entregar o mesmo nível de especificação técnica, com rastreabilidade completa e prazo de entrega muito mais previsível.",
+        "Antes de decidir, vale pedir de qualquer fornecedor — nacional ou importado — o certificado de análise do lote, não apenas a ficha técnica genérica do produto."
+      ]
+    },
+    {
+      slug: "como-avaliar-um-fabricante-de-acido-sulfurico-pa-acs",
+      title: "Como avaliar um fabricante de ácido sulfúrico PA-ACS",
+      category: "Produtos",
+      date: "2026-08-04",
+      image: "",
+      excerpt: "Nem toda empresa que vende ácido sulfúrico PA-ACS o fabrica. Veja os pontos que realmente diferenciam um fabricante de um simples revendedor.",
+      body: [
+        "No mercado de reagentes de alta pureza, é fácil confundir quem fabrica com quem apenas revende um produto de terceiros com etiqueta própria. Para quem depende de consistência de lote a lote, essa diferença importa — e muito.",
+        "Um primeiro ponto a verificar é se a empresa possui unidade industrial própria, com processo de purificação documentado — e não apenas um centro de distribuição.",
+        "O segundo é o controle analítico: pergunte qual técnica é usada para verificar contaminantes (ICP-OES é hoje um dos padrões mais confiáveis) e se cada lote recebe certificado de análise antes de ser liberado.",
+        "Por fim, vale checar rastreabilidade — se é possível identificar a origem e o histórico de qualidade de um lote específico — e há quanto tempo a empresa atua no setor, sem trocar de controle acionário ou nome com frequência.",
+        "Fabricantes com décadas de atuação contínua e laboratório próprio tendem a ser mais transparentes sobre esses pontos, justamente porque têm o processo sob seu próprio controle."
+      ]
+    },
+    {
+      slug: "como-interpretar-certificado-de-analise-reagente",
+      title: "Como interpretar o certificado de análise de um reagente",
+      category: "Qualidade",
+      date: "2026-08-02",
+      image: "",
+      excerpt: "O certificado de análise é o documento que prova, lote a lote, que o reagente entregue corresponde à especificação declarada. Veja o que observar nele.",
+      body: [
+        "O certificado de análise (CoA) é o documento que acompanha um lote de reagente e comprova, com dados de ensaio reais, que aquele lote específico atende à especificação declarada — diferente da ficha técnica, que descreve o produto de forma genérica.",
+        "Ao receber um certificado, o primeiro ponto a checar é se o número do lote no documento corresponde exatamente ao lote físico recebido — certificados genéricos ou desatualizados são um sinal de alerta.",
+        "Em seguida, observe os parâmetros analisados: teor do princípio ativo, aparência, e — no caso de reagentes de alta pureza — os limites de contaminantes metálicos, idealmente verificados por uma técnica como ICP-OES.",
+        "Por fim, verifique se o certificado indica a data de análise e é assinado ou emitido por um laboratório identificável — de preferência o laboratório próprio do fabricante, não um terceiro genérico.",
+        "Um fornecedor que emite certificado de análise por lote, de forma consistente, está demonstrando controle real de processo — não apenas uma promessa de qualidade no rótulo."
+      ]
+    },
+    {
       slug: "quem-fabrica-acido-nitrico-pa-65-no-brasil",
       title: "Quem fabrica Ácido Nítrico PA 65% no Brasil?",
       category: "Produtos",
