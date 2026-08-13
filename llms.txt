@@ -4,6 +4,8 @@
 
 Fundada por Jorge Hanaoka, antes chamada Micro-Química.
 
+O site também está disponível em inglês, com as mesmas páginas em [hanaoka.com.br/en/](https://hanaoka.com.br/en/index.html) — cada página em português tem sua equivalente em `en/` (ex.: `/produtos.html` → `/en/produtos.html`).
+
 ## Páginas principais
 - [Início](https://hanaoka.com.br/): visão geral da empresa, diferenciais e linha de produtos.
 - [Institucional](https://hanaoka.com.br/sobre.html): história, missão, visão, valores e certificações.
@@ -21,6 +23,10 @@ Fundada por Jorge Hanaoka, antes chamada Micro-Química.
 - [Blog](https://hanaoka.com.br/blog.html): conteúdo sobre produtos, segurança industrial e sustentabilidade.
 - [Perguntas Frequentes](https://hanaoka.com.br/perguntas-frequentes.html): respostas diretas sobre fabricação, localização e certificação.
 - [Contato](https://hanaoka.com.br/contato.html) / [Solicitar Orçamento](https://hanaoka.com.br/orcamento.html)
+
+## English version
+- [Home](https://hanaoka.com.br/en/index.html), [Products](https://hanaoka.com.br/en/produtos.html), [About](https://hanaoka.com.br/en/sobre.html), [Hanaoka PureLab](https://hanaoka.com.br/en/purelab.html), [Nitric Acid PA 65%](https://hanaoka.com.br/en/acido-nitrico-pa-65.html), [Sulfuric Acid PA-ACS](https://hanaoka.com.br/en/acido-sulfurico-pa-acs.html), [Hydrochloric Acid PA-ACS](https://hanaoka.com.br/en/acido-cloridrico-pa.html), [FAQ](https://hanaoka.com.br/en/perguntas-frequentes.html), [Blog](https://hanaoka.com.br/en/blog.html).
+- Every Portuguese page has an English counterpart under `/en/` with the same filename.
 
 ## Catálogo estruturado
 - [catalogo.json](https://hanaoka.com.br/catalogo.json) / [catalogo.csv](https://hanaoka.com.br/catalogo.csv): dados legíveis por máquina dos reagentes prioritários (fórmula, CAS, grau, concentração, URL).
