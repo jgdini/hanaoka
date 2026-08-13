@@ -1151,6 +1151,15 @@ a.doc-row__action:active { transform: translateY(0); box-shadow: none; }
 .post-article__body p + p { margin-top: var(--sp-4); }
 
 /* ==========================================================================
+   LinkedIn embeds — posts reais incorporados no blog
+   ========================================================================== */
+.linkedin-section__head { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-8); }
+.linkedin-section__icon { color: #0a66c2; flex-shrink: 0; }
+.linkedin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-6); }
+.linkedin-embed-card { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--paper-200); background: var(--paper-0); box-shadow: 0 1px 3px rgba(10,26,31,.06); }
+.linkedin-embed-card iframe { display: block; width: 100%; border: 0; }
+
+/* ==========================================================================
    Editor de blog — login e painel (protótipo client-side)
    ========================================================================== */
 .proto-notice {

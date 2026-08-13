@@ -80,6 +80,21 @@
         </div>
 
       </div>
+
+      <div class="admin-panel reveal" style="margin-top: var(--sp-8);">
+        <h2>Posts do LinkedIn em destaque</h2>
+        <p class="spec-note">Como pegar o código: abra o post público no LinkedIn → clique nos três pontinhos "..." no canto do post → <strong>"Incorporar esta publicação"</strong> → copie o código e cole abaixo (pode colar o código inteiro ou só o link que começa com linkedin.com/embed/).</p>
+        <div id="li-admin-list" class="admin-post-list" style="margin-top: var(--sp-4);"></div>
+        <form id="li-admin-form" style="display: grid; gap: var(--sp-3); margin-top: var(--sp-6);">
+          <div class="field">
+            <label for="li-input">Código ou link de incorporação do LinkedIn</label>
+            <textarea id="li-input" style="min-height: 90px;" placeholder='&lt;iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:..." ...&gt;&lt;/iframe&gt;'></textarea>
+          </div>
+          <button class="btn btn--reagent" type="submit" style="justify-self: start;">Adicionar post do LinkedIn</button>
+          <p id="li-admin-error" class="spec-note" style="color: var(--reagent-500); display: none;">Não reconheci esse código — confira se copiou o link de incorporação certo (começa com https://www.linkedin.com/embed/).</p>
+        </form>
+      </div>
+
     </div>
   </section>
 </main>
@@ -95,6 +110,8 @@
 
 <script src="assets/js/blog-store.js"></script>
 <script src="assets/js/blog-admin.js"></script>
+<script src="assets/js/linkedin-store.js"></script>
+<script src="assets/js/linkedin-admin.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
