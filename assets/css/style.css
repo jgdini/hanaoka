@@ -1151,6 +1151,25 @@ a.doc-row__action:active { transform: translateY(0); box-shadow: none; }
 .post-article__body p + p { margin-top: var(--sp-4); }
 
 /* ==========================================================================
+   Trabalhe Conosco — lista de vagas (acordeão nativo <details>)
+   ========================================================================== */
+.job-list { display: flex; flex-direction: column; gap: var(--sp-4); }
+.job-card { border: 1px solid var(--paper-200); border-radius: var(--radius-md); background: var(--paper-0); overflow: hidden; }
+.job-card summary { cursor: pointer; list-style: none; padding: var(--sp-6); display: flex; justify-content: space-between; align-items: center; gap: var(--sp-4); }
+.job-card summary::-webkit-details-marker { display: none; }
+.job-card__title { font-family: var(--font-display); font-size: 1.1rem; color: var(--ink-900); }
+.job-card__meta { display: flex; gap: var(--sp-3); flex-wrap: wrap; margin-top: var(--sp-2); }
+.job-card__tag { font-family: var(--font-mono); font-size: 0.72rem; background: var(--paper-100); color: var(--ink-700); padding: 3px 10px; border-radius: 999px; }
+.job-card__chevron { flex-shrink: 0; color: var(--aqua-500); transition: transform var(--dur-fast) var(--ease-out); }
+.job-card[open] .job-card__chevron { transform: rotate(180deg); }
+.job-card__body { padding: 0 var(--sp-6) var(--sp-6); border-top: 1px solid var(--paper-200); padding-top: var(--sp-4); color: var(--ink-700); font-size: 0.95rem; line-height: 1.7; }
+.job-card__body h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-500); margin-top: var(--sp-4); }
+.job-card__body h4:first-child { margin-top: 0; }
+.job-card__body p { margin-top: var(--sp-2); }
+.job-empty { text-align: center; padding: var(--sp-16) var(--sp-6); color: var(--ink-500); }
+.job-empty a { text-decoration: underline; }
+
+/* ==========================================================================
    LinkedIn embeds — posts reais incorporados no blog
    ========================================================================== */
 .linkedin-section__head { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-8); }

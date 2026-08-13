@@ -23,6 +23,7 @@ O site também está disponível em inglês, com as mesmas páginas em [hanaoka.
 - [Blog](https://hanaoka.com.br/blog.html): conteúdo sobre produtos, segurança industrial e sustentabilidade.
 - [Perguntas Frequentes](https://hanaoka.com.br/perguntas-frequentes.html): respostas diretas sobre fabricação, localização e certificação.
 - [Contato](https://hanaoka.com.br/contato.html) / [Solicitar Orçamento](https://hanaoka.com.br/orcamento.html)
+- [Trabalhe Conosco](https://hanaoka.com.br/trabalhe-conosco.html): vagas abertas na Hanaoka.
 
 ## English version
 - [Home](https://hanaoka.com.br/en/index.html), [Products](https://hanaoka.com.br/en/produtos.html), [About](https://hanaoka.com.br/en/sobre.html), [Hanaoka PureLab](https://hanaoka.com.br/en/purelab.html), [Nitric Acid PA 65%](https://hanaoka.com.br/en/acido-nitrico-pa-65.html), [Sulfuric Acid PA-ACS](https://hanaoka.com.br/en/acido-sulfurico-pa-acs.html), [Hydrochloric Acid PA-ACS](https://hanaoka.com.br/en/acido-cloridrico-pa.html), [FAQ](https://hanaoka.com.br/en/perguntas-frequentes.html), [Blog](https://hanaoka.com.br/en/blog.html).

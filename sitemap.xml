@@ -272,4 +272,20 @@
     <changefreq>yearly</changefreq>
     <priority>0.55</priority>
   </url>
+  <url>
+    <loc>https://hanaoka.com.br/trabalhe-conosco.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hanaoka.com.br/trabalhe-conosco.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hanaoka.com.br/en/trabalhe-conosco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hanaoka.com.br/trabalhe-conosco.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hanaoka.com.br/en/trabalhe-conosco.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hanaoka.com.br/trabalhe-conosco.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hanaoka.com.br/en/trabalhe-conosco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hanaoka.com.br/trabalhe-conosco.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
 </urlset>
