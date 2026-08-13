@@ -73,13 +73,41 @@
     </div>
   </section>
 
-  <section class="cta-strip">
-    <div class="container">
-      <div>
-        <h2>Didn't find a role that fits?</h2>
-        <p>Send us your resume anyway — we'll keep it on file for future openings.</p>
+  <section class="section section--paper" id="candidatura">
+    <div class="container" style="max-width: 720px;">
+      <div class="section-head reveal">
+        <span class="eyebrow">Application</span>
+        <h2>Send your application.</h2>
+        <p>Didn't find a role that fits? Send one anyway, as a spontaneous application — we'll keep it on file for future openings.</p>
       </div>
-      <a class="btn btn--reagent" href="mailto:vagas@hanaoka.com.br?subject=Spontaneous%20application">Send resume</a>
+      <form class="form-card reveal" id="job-application-form" data-contact-form data-success-message="Application received! Our team will review it and get back to you soon.">
+        <div class="form-grid">
+          <div class="field">
+            <label for="app-nome">Your name</label>
+            <input id="app-nome" name="nome" type="text" required>
+          </div>
+          <div class="field">
+            <label for="app-email">Your email</label>
+            <input id="app-email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="app-telefone">Your phone</label>
+            <input id="app-telefone" name="telefone" type="tel" placeholder="+55 (11) 90000-0000">
+          </div>
+          <div class="field">
+            <label for="app-vaga">Position you're interested in</label>
+            <select id="app-vaga" name="vaga">
+              <option value="">Spontaneous application</option>
+            </select>
+          </div>
+          <div class="field field--span2">
+            <label for="app-mensagem">Tell us a bit about yourself</label>
+            <textarea id="app-mensagem" name="mensagem" placeholder="Experience, education, availability..."></textarea>
+          </div>
+        </div>
+        <button class="btn btn--reagent" type="submit" style="margin-top: var(--sp-6);">Send application</button>
+        <p class="form-note"></p>
+      </form>
     </div>
   </section>
 

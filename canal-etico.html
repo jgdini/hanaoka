@@ -65,7 +65,34 @@
         </div>
       </div>
 
-      <a class="btn btn--reagent" href="mailto:denuncia@hanaoka.com.br" style="margin-top: var(--sp-8); display: inline-flex;">Enviar denúncia</a>
+      <form class="form-card reveal" style="margin-top: var(--sp-12);" data-contact-form data-success-message="Denúncia recebida. Obrigado por ajudar a manter nossa integridade — o Comitê de Integridade vai analisar o caso.">
+        <div class="form-grid">
+          <div class="field">
+            <label for="d-nome">Seu nome (opcional)</label>
+            <input id="d-nome" name="nome" type="text" placeholder="Pode deixar em branco para relatar anonimamente">
+          </div>
+          <div class="field">
+            <label for="d-email">Seu e-mail (opcional)</label>
+            <input id="d-email" name="email" type="email" placeholder="Só se quiser retorno sobre o caso">
+          </div>
+          <div class="field">
+            <label for="d-relacao">Sua relação com a Hanaoka</label>
+            <select id="d-relacao" name="relacao">
+              <option value="">Prefiro não informar</option>
+              <option>Colaborador(a)</option>
+              <option>Fornecedor(a)</option>
+              <option>Cliente</option>
+              <option>Terceiro(a)</option>
+            </select>
+          </div>
+          <div class="field field--span2">
+            <label for="d-mensagem">Descreva a situação</label>
+            <textarea id="d-mensagem" name="mensagem" placeholder="Conte o que aconteceu, quando e quem esteve envolvido, com o máximo de detalhes possível." required></textarea>
+          </div>
+        </div>
+        <button class="btn btn--reagent" type="submit" style="margin-top: var(--sp-6);">Enviar denúncia</button>
+        <p class="form-note"></p>
+      </form>
     </div>
   </section>
 </main>

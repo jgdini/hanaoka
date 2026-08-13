@@ -16,9 +16,10 @@
 
   section.hidden = false;
   grid.innerHTML = items.map(function (item) {
+    var height = item.embedHeight || 700;
     return (
       '<div class="linkedin-embed-card">' +
-      '<iframe src="' + item.embedUrl + '" height="527" frameborder="0" allowfullscreen loading="lazy" title="Post do LinkedIn da Hanaoka"></iframe>' +
+      '<iframe src="' + item.embedUrl + '" height="' + height + '" frameborder="0" allowfullscreen loading="lazy" title="Post do LinkedIn da Hanaoka"></iframe>' +
       "</div>"
     );
   }).join("");

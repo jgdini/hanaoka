@@ -68,7 +68,34 @@
         </div>
       </div>
 
-      <a class="btn btn--reagent" href="mailto:denuncia@hanaoka.com.br" style="margin-top: var(--sp-8); display: inline-flex;">Submit a report</a>
+      <form class="form-card reveal" style="margin-top: var(--sp-12);" data-contact-form data-success-message="Report received. Thank you for helping us maintain our integrity — our Integrity Committee will review the case.">
+        <div class="form-grid">
+          <div class="field">
+            <label for="d-nome">Your name (optional)</label>
+            <input id="d-nome" name="nome" type="text" placeholder="Leave blank to report anonymously">
+          </div>
+          <div class="field">
+            <label for="d-email">Your email (optional)</label>
+            <input id="d-email" name="email" type="email" placeholder="Only if you want updates on the case">
+          </div>
+          <div class="field">
+            <label for="d-relacao">Your relationship with Hanaoka</label>
+            <select id="d-relacao" name="relacao">
+              <option value="">Prefer not to say</option>
+              <option>Employee</option>
+              <option>Supplier</option>
+              <option>Customer</option>
+              <option>Third party</option>
+            </select>
+          </div>
+          <div class="field field--span2">
+            <label for="d-mensagem">Describe the situation</label>
+            <textarea id="d-mensagem" name="mensagem" placeholder="Tell us what happened, when, and who was involved, with as much detail as possible." required></textarea>
+          </div>
+        </div>
+        <button class="btn btn--reagent" type="submit" style="margin-top: var(--sp-6);">Submit report</button>
+        <p class="form-note"></p>
+      </form>
     </div>
   </section>
 </main>

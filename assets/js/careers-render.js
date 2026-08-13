@@ -3,9 +3,10 @@
   if (!window.HanaokaJobs) return;
 
   var pageLang = (document.documentElement.lang || "pt-BR").slice(0, 2);
-  var APPLY_EMAIL = "vagas@hanaoka.com.br";
 
   var list = document.getElementById("job-list");
+  var vagaSelect = document.getElementById("app-vaga");
+  var appForm = document.getElementById("job-application-form");
   if (!list) return;
 
   function escapeHtml(str) {
@@ -32,26 +33,41 @@
     return "<ul>" + lines.map(function (l) { return "<li>" + escapeHtml(l) + "</li>"; }).join("") + "</ul>";
   }
 
+  function goToApplicationForm(jobTitle) {
+    if (vagaSelect && jobTitle) vagaSelect.value = jobTitle;
+    var target = document.getElementById("candidatura");
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    var nameField = document.getElementById("app-nome");
+    if (nameField) window.setTimeout(function () { nameField.focus(); }, 400);
+  }
+
   var jobs = window.HanaokaJobs.getAll(pageLang);
 
+  // Preenche o seletor "Vaga de interesse" do formulário com as vagas abertas.
+  if (vagaSelect) {
+    jobs.forEach(function (job) {
+      var opt = document.createElement("option");
+      opt.value = job.title;
+      opt.textContent = job.title;
+      vagaSelect.appendChild(opt);
+    });
+  }
+
   if (!jobs.length) {
-    var emailHref = "mailto:" + APPLY_EMAIL + "?subject=" + encodeURIComponent(
-      pageLang === "en" ? "Spontaneous application" : "Candidatura espontânea"
-    );
-    list.outerHTML = pageLang === "en"
-      ? '<div class="job-empty"><p>No open positions right now. Want to be considered for future openings? <a href="' + emailHref + '">Send us your resume</a>.</p></div>'
-      : '<div class="job-empty"><p>Nenhuma vaga aberta no momento. Quer deixar seu currículo pra futuras oportunidades? <a href="' + emailHref + '">Envie pra gente</a>.</p></div>';
+    var emptyText = pageLang === "en"
+      ? 'No open positions right now. Want to be considered for future openings? <a href="#candidatura">Send us your resume</a>.'
+      : 'Nenhuma vaga aberta no momento. Quer deixar seu currículo pra futuras oportunidades? <a href="#candidatura">Envie pra gente</a>.';
+    list.outerHTML = '<div class="job-empty"><p>' + emptyText + "</p></div>";
     return;
   }
 
   var labels = pageLang === "en"
-    ? { desc: "Description", reqs: "Requirements", apply: "Apply for this position", subject: "Application: " }
-    : { desc: "Descrição", reqs: "Requisitos", apply: "Candidatar-se a esta vaga", subject: "Candidatura: " };
+    ? { desc: "Description", reqs: "Requirements", apply: "Apply for this position" }
+    : { desc: "Descrição", reqs: "Requisitos", apply: "Candidatar-se a esta vaga" };
 
   list.innerHTML = jobs.map(function (job) {
     var tags = [job.department, job.location, job.type].filter(Boolean)
       .map(function (t) { return '<span class="job-card__tag">' + escapeHtml(t) + "</span>"; }).join("");
-    var applyHref = "mailto:" + APPLY_EMAIL + "?subject=" + encodeURIComponent(labels.subject + job.title);
     return (
       '<details class="job-card">' +
       "<summary>" +
@@ -65,9 +81,14 @@
       "<h4>" + labels.desc + "</h4>" +
       paragraphs(job.description) +
       (job.requirements ? "<h4>" + labels.reqs + "</h4>" + bulletList(job.requirements) : "") +
-      '<a class="btn btn--reagent" style="margin-top: var(--sp-6); display: inline-flex;" href="' + applyHref + '">' + labels.apply + "</a>" +
+      '<button type="button" class="btn btn--reagent job-card__apply" style="margin-top: var(--sp-6);" data-job-title="' + escapeHtml(job.title) + '">' + labels.apply + "</button>" +
       "</div>" +
       "</details>"
     );
   }).join("");
+
+  list.addEventListener("click", function (e) {
+    var btn = e.target.closest(".job-card__apply");
+    if (btn) goToApplicationForm(btn.getAttribute("data-job-title"));
+  });
 })();

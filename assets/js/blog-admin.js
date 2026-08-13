@@ -15,11 +15,42 @@
   var categoryField = document.getElementById("f-category");
   var dateField = document.getElementById("f-date");
   var imageField = document.getElementById("f-image");
+  var imagePreview = document.getElementById("f-image-preview");
+  var imagePreviewImg = document.getElementById("f-image-preview-img");
+  var imageRemoveBtn = document.getElementById("f-image-remove");
   var excerptField = document.getElementById("f-excerpt");
   var bodyField = document.getElementById("f-body");
   var formTitle = document.getElementById("admin-form-title");
   var newBtn = document.getElementById("admin-new-btn");
   var logoutBtn = document.getElementById("admin-logout-btn");
+
+  // A imagem de capa vira um data: URL (base64) e viaja junto com o post no
+  // localStorage — não é uma URL de servidor, é o arquivo em si, codificado.
+  var currentImage = "";
+
+  function showImagePreview(src) {
+    currentImage = src || "";
+    if (currentImage) {
+      imagePreviewImg.src = currentImage;
+      imagePreview.hidden = false;
+    } else {
+      imagePreviewImg.src = "";
+      imagePreview.hidden = true;
+    }
+  }
+
+  imageField.addEventListener("change", function () {
+    var file = imageField.files && imageField.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function () { showImagePreview(reader.result); };
+    reader.readAsDataURL(file);
+  });
+
+  imageRemoveBtn.addEventListener("click", function () {
+    showImagePreview("");
+    imageField.value = "";
+  });
 
   function render() {
     var posts = window.HanaokaBlog.getAll();
@@ -45,6 +76,7 @@
     langField.value = "pt";
     formTitle.textContent = "Novo post";
     dateField.value = new Date().toISOString().slice(0, 10);
+    showImagePreview("");
   }
 
   render();
@@ -62,7 +94,7 @@
       titleField.value = post.title;
       categoryField.value = post.category;
       dateField.value = post.date;
-      imageField.value = post.image || "";
+      showImagePreview(post.image || "");
       excerptField.value = post.excerpt;
       bodyField.value = (post.body || []).join("\n\n");
       window.scrollTo({ top: form.offsetTop - 100, behavior: "smooth" });
@@ -87,7 +119,7 @@
       title: titleField.value.trim(),
       category: categoryField.value.trim() || "Geral",
       date: dateField.value,
-      image: imageField.value.trim(),
+      image: currentImage,
       excerpt: excerptField.value.trim(),
       body: body
     });

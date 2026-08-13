@@ -27,20 +27,31 @@
     return readStore().slice().sort(function (a, b) { return new Date(b.addedDate) - new Date(a.addedDate); });
   }
 
-  // Aceita tanto o snippet completo (<iframe src="...">) quanto só a URL.
-  function extractEmbedUrl(input) {
+  // Aceita tanto o snippet completo (<iframe src="..." height="...">) quanto só a URL.
+  // O LinkedIn calcula a altura certa pra cada post individualmente — por isso
+  // extraímos e guardamos essa altura junto, em vez de forçar um valor fixo
+  // igual pra todo mundo (isso é o que causava a barra de rolagem interna).
+  function extractEmbed(input) {
     if (!input) return null;
     var srcMatch = input.match(/src=["']([^"']+)["']/i);
     var url = srcMatch ? srcMatch[1] : input.trim();
     if (!/^https:\/\/www\.linkedin\.com\/embed\//i.test(url)) return null;
-    return url;
+    var heightMatch = input.match(/height=["']?(\d+)["']?/i);
+    var height = heightMatch ? parseInt(heightMatch[1], 10) : 700;
+    return { url: url, height: height };
+  }
+
+  // Mantido por compatibilidade (retorna só a URL).
+  function extractEmbedUrl(input) {
+    var parsed = extractEmbed(input);
+    return parsed ? parsed.url : null;
   }
 
   function add(input) {
-    var url = extractEmbedUrl(input);
-    if (!url) return null;
+    var parsed = extractEmbed(input);
+    if (!parsed) return null;
     var items = readStore();
-    var item = { id: Date.now().toString(36), embedUrl: url, addedDate: new Date().toISOString().slice(0, 10) };
+    var item = { id: Date.now().toString(36), embedUrl: parsed.url, embedHeight: parsed.height, addedDate: new Date().toISOString().slice(0, 10) };
     items.unshift(item);
     writeStore(items);
     return item;

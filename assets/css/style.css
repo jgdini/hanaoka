@@ -1258,6 +1258,17 @@ a.doc-row__action:active { transform: translateY(0); box-shadow: none; }
 .admin-post-row__actions button.is-danger:hover { border-color: #b3261e; color: #b3261e; }
 @media (max-width: 900px) { .admin-layout { grid-template-columns: 1fr; } }
 
+.image-preview { position: relative; display: inline-block; margin-bottom: var(--sp-3); }
+.image-preview img { display: block; max-width: 220px; max-height: 140px; border-radius: var(--radius-sm); border: 1px solid var(--paper-200); object-fit: cover; }
+.image-preview__remove {
+  position: absolute; top: -8px; right: -8px;
+  width: 24px; height: 24px; border-radius: 999px;
+  background: var(--ink-900); color: var(--paper-0); border: 2px solid var(--paper-0);
+  font-size: 0; line-height: 0; cursor: pointer;
+}
+.image-preview__remove::before { content: "×"; font-size: 16px; line-height: 1; display: inline-block; }
+.image-preview__remove:hover { background: #b3261e; }
+
 /* ==========================================================================
    Info grid — blocos editoriais simples (política, missão/visão/valores)
    ========================================================================== */

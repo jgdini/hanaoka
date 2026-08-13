@@ -64,8 +64,13 @@
               <input id="f-date" type="date">
             </div>
             <div class="field">
-              <label for="f-image">Imagem de capa (URL, opcional)</label>
-              <input id="f-image" type="url" placeholder="https://...">
+              <label for="f-image">Imagem de capa (opcional)</label>
+              <div id="f-image-preview" class="image-preview" hidden>
+                <img id="f-image-preview-img" alt="Pré-visualização da imagem de capa">
+                <button type="button" id="f-image-remove" class="image-preview__remove">Remover imagem</button>
+              </div>
+              <input id="f-image" type="file" accept="image/*">
+              <p class="spec-note" style="margin-top: var(--sp-2);">Escolha uma foto do seu computador (JPG ou PNG). Ela fica salva junto com o post neste navegador — evite fotos muito pesadas (ideal até ~1MB).</p>
             </div>
             <div class="field">
               <label for="f-excerpt">Resumo</label>
@@ -83,7 +88,7 @@
 
       <div class="admin-panel reveal" style="margin-top: var(--sp-8);">
         <h2>Posts do LinkedIn em destaque</h2>
-        <p class="spec-note">Como pegar o código: abra o post público no LinkedIn → clique nos três pontinhos "..." no canto do post → <strong>"Incorporar esta publicação"</strong> → copie o código e cole abaixo (pode colar o código inteiro ou só o link que começa com linkedin.com/embed/).</p>
+        <p class="spec-note">Como pegar o código: abra o post público no LinkedIn → clique nos três pontinhos "..." no canto do post → <strong>"Incorporar esta publicação"</strong> → copie o código <strong>inteiro</strong> (o &lt;iframe&gt; completo) e cole abaixo. Colar o código inteiro é importante — é ele que diz a altura certa daquele post específico, senão o post pode aparecer cortado com barra de rolagem.</p>
         <div id="li-admin-list" class="admin-post-list" style="margin-top: var(--sp-4);"></div>
         <form id="li-admin-form" style="display: grid; gap: var(--sp-3); margin-top: var(--sp-6);">
           <div class="field">
