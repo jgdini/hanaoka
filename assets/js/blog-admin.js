@@ -10,6 +10,7 @@
   var listEl = document.getElementById("admin-post-list");
   var form = document.getElementById("admin-form");
   var slugField = document.getElementById("f-slug");
+  var langField = document.getElementById("f-lang");
   var titleField = document.getElementById("f-title");
   var categoryField = document.getElementById("f-category");
   var dateField = document.getElementById("f-date");
@@ -23,9 +24,12 @@
   function render() {
     var posts = window.HanaokaBlog.getAll();
     listEl.innerHTML = posts.map(function (p) {
+      var langTag = (p.lang || "pt") === "en" ? "EN" : "PT";
       return (
         '<div class="admin-post-row">' +
-        '<div><div class="admin-post-row__title">' + p.title + "</div>" +
+        '<div><div class="admin-post-row__title">' +
+        '<span style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.04em; padding:1px 6px; border-radius:4px; background:var(--aqua-100,#e3f2fa); color:var(--petrol-900); margin-right:6px; vertical-align:middle;">' + langTag + '</span>' +
+        p.title + "</div>" +
         '<div class="admin-post-row__meta">' + p.category + " · " + p.date + "</div></div>" +
         '<div class="admin-post-row__actions">' +
         '<button type="button" data-edit="' + p.slug + '">Editar</button>' +
@@ -38,6 +42,7 @@
   function resetForm() {
     form.reset();
     slugField.value = "";
+    langField.value = "pt";
     formTitle.textContent = "Novo post";
     dateField.value = new Date().toISOString().slice(0, 10);
   }
@@ -53,6 +58,7 @@
       if (!post) return;
       formTitle.textContent = "Editando: " + post.title;
       slugField.value = post.slug;
+      langField.value = post.lang || "pt";
       titleField.value = post.title;
       categoryField.value = post.category;
       dateField.value = post.date;
@@ -77,6 +83,7 @@
     var body = bodyField.value.split(/\n\s*\n/).map(function (p) { return p.trim(); }).filter(Boolean);
     window.HanaokaBlog.upsert({
       slug: slugField.value || undefined,
+      lang: langField.value || "pt",
       title: titleField.value.trim(),
       category: categoryField.value.trim() || "Geral",
       date: dateField.value,

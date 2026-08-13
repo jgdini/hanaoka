@@ -28,7 +28,7 @@
 
       <div class="proto-notice reveal" style="margin-bottom: var(--sp-8);">
         <span aria-hidden="true">ℹ️</span>
-        <span><strong>Protótipo de demonstração.</strong> Os posts que você criar ou editar aqui ficam salvos apenas neste navegador (localStorage) — outros visitantes do site não verão essas mudanças. Não há senha segura de verdade. A edição real e multiusuário chega com a migração para WordPress.</span>
+        <span><strong>Protótipo de demonstração.</strong> Os posts que você criar ou editar aqui ficam salvos apenas neste navegador (localStorage) — outros visitantes do site não verão essas mudanças. Não há senha segura de verdade. A edição real e multiusuário — incluindo o controle de idioma abaixo — chega com a migração para WordPress, usando um plugin de tradução como o Polylang.</span>
       </div>
 
       <div class="admin-layout">
@@ -43,6 +43,14 @@
           <h2 id="admin-form-title">Novo post</h2>
           <form id="admin-form" style="display: grid; gap: var(--sp-4);">
             <input type="hidden" id="f-slug">
+            <div class="field">
+              <label for="f-lang">Idioma do post</label>
+              <select id="f-lang">
+                <option value="pt">Português (aparece em /blog.html)</option>
+                <option value="en">English (aparece em /en/blog.html)</option>
+              </select>
+              <p class="spec-note" style="margin-top: var(--sp-2);">Cada post é de um idioma só. Para publicar a mesma matéria nos dois idiomas, escreva o post em Português, salve, clique em "+ Novo post" e crie a versão em English separadamente (pode ser o mesmo título traduzido). Eles aparecem cada um no seu blog (PT ou EN) automaticamente.</p>
+            </div>
             <div class="field">
               <label for="f-title">Título</label>
               <input id="f-title" type="text" required>

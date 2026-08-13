@@ -6,14 +6,31 @@
 (function (global) {
   "use strict";
 
-  var STORAGE_KEY = "hanaoka_blog_posts_v1";
+  var STORAGE_KEY = "hanaoka_blog_posts_v2"; // v2: added lang field + EN demo post
   var AUTH_KEY = "hanaoka_admin_session";
   var DEMO_USER = "admin";
   var DEMO_PASS = "hanaoka2026";
 
   var SEED_POSTS = [
     {
+      slug: "difference-between-technical-pa-and-acs-grade",
+      lang: "en",
+      title: "Difference between technical, PA, and ACS grade",
+      category: "Products",
+      date: "2026-07-15",
+      image: "",
+      excerpt: "Technical, PA, and ACS are not just labels — each grade represents a different level of analytical control. Find out which one fits your process.",
+      body: [
+        "Not all acid is the same, even when the chemical formula is identical. The purity grade determines where and how a reagent can be used safely and with reliable results.",
+        "Technical grade suits general industrial processes, where small purity variations don't compromise the final outcome — such as metal pickling or effluent treatment.",
+        "PA grade (analytical reagent) carries stricter analytical control, with low contaminant levels, making it suitable for laboratories and processes that require reproducibility.",
+        "PA-ACS grade meets American Chemical Society specifications, the most demanding standard, used in ultra-high-precision analysis and research.",
+        "At Hanaoka, every grade is manufactured and diluted to specification, with analysis in our own laboratory prior to release — ensuring the delivered product matches exactly the declared grade."
+      ]
+    },
+    {
       slug: "controle-de-metais-por-icp-oes",
+      lang: "pt",
       title: "Controle de metais por ICP-OES: por que isso importa",
       category: "Qualidade",
       date: "2026-08-07",
@@ -28,6 +45,7 @@
     },
     {
       slug: "acido-sulfurico-nacional-versus-importado",
+      lang: "pt",
       title: "Ácido sulfúrico nacional versus importado: o que considerar",
       category: "Produtos",
       date: "2026-08-06",
@@ -42,6 +60,7 @@
     },
     {
       slug: "como-avaliar-um-fabricante-de-acido-sulfurico-pa-acs",
+      lang: "pt",
       title: "Como avaliar um fabricante de ácido sulfúrico PA-ACS",
       category: "Produtos",
       date: "2026-08-04",
@@ -57,6 +76,7 @@
     },
     {
       slug: "como-interpretar-certificado-de-analise-reagente",
+      lang: "pt",
       title: "Como interpretar o certificado de análise de um reagente",
       category: "Qualidade",
       date: "2026-08-02",
@@ -72,6 +92,7 @@
     },
     {
       slug: "quem-fabrica-acido-nitrico-pa-65-no-brasil",
+      lang: "pt",
       title: "Quem fabrica Ácido Nítrico PA 65% no Brasil?",
       category: "Produtos",
       date: "2026-08-01",
@@ -86,6 +107,7 @@
     },
     {
       slug: "diferenca-entre-grau-tecnico-pa-e-acs",
+      lang: "pt",
       title: "Diferença entre grau técnico, PA e ACS",
       category: "Produtos",
       date: "2026-07-15",
@@ -101,6 +123,7 @@
     },
     {
       slug: "o-que-e-acido-sulfurico",
+      lang: "pt",
       title: "O que é o Ácido Sulfúrico?",
       category: "Produtos",
       date: "2026-05-12",
@@ -114,6 +137,7 @@
     },
     {
       slug: "acido-sulfurico-pa-acs-98-pureza-seguranca",
+      lang: "pt",
       title: "Ácido Sulfúrico PA-ACS 98%: pureza, segurança e excelência",
       category: "Produtos",
       date: "2026-04-28",
@@ -127,6 +151,7 @@
     },
     {
       slug: "importancia-da-hidrogenacao-na-industria",
+      lang: "pt",
       title: "A importância da hidrogenação na indústria",
       category: "Indústria",
       date: "2026-04-10",
@@ -140,6 +165,7 @@
     },
     {
       slug: "conheca-as-certificacoes-da-hanaoka",
+      lang: "pt",
       title: "Conheça as certificações da Hanaoka",
       category: "Institucional",
       date: "2026-03-22",
@@ -153,6 +179,7 @@
     },
     {
       slug: "armazenamento-seguro-acido-sulfurico",
+      lang: "pt",
       title: "Armazenamento seguro e manuseio adequado do Ácido Sulfúrico",
       category: "Segurança",
       date: "2026-03-05",
@@ -166,6 +193,7 @@
     },
     {
       slug: "transporte-de-produtos-quimicos-com-seguranca",
+      lang: "pt",
       title: "Transporte de produtos químicos: como fazer com segurança",
       category: "Segurança",
       date: "2026-02-18",
@@ -202,8 +230,11 @@
     return existing;
   }
 
-  function getAll() {
+  function getAll(lang) {
     var posts = ensureSeeded();
+    if (lang) {
+      posts = posts.filter(function (p) { return (p.lang || "pt") === lang; });
+    }
     return posts.slice().sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
   }
 
@@ -222,6 +253,7 @@
   function upsert(post) {
     var posts = ensureSeeded();
     if (!post.slug) post.slug = slugify(post.title) + "-" + Date.now().toString(36);
+    if (!post.lang) post.lang = "pt";
     var idx = posts.findIndex(function (p) { return p.slug === post.slug; });
     if (idx >= 0) posts[idx] = post; else posts.unshift(post);
     writeStore(posts);
