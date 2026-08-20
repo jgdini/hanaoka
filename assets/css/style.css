@@ -1043,6 +1043,48 @@ sub { font-size: 0.7em; }
 }
 
 /* ==========================================================================
+   Word tags — pílulas estáticas pra listar valores/adjetivos de cultura
+   ========================================================================== */
+.word-tags { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.word-tags__tag {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--paper-200);
+  border-radius: 999px;
+  color: var(--petrol-700);
+  background: var(--paper-0);
+}
+.section--navy .word-tags__tag { border-color: rgba(255,255,255,0.24); color: var(--aqua-300); background: rgba(255,255,255,0.06); }
+
+/* ==========================================================================
+   WhatsApp — botão flutuante fixo, presente em todas as páginas
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  right: var(--sp-6);
+  bottom: var(--sp-6);
+  z-index: 60;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 20px rgba(10, 26, 31, 0.28);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.whatsapp-float:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 10px 26px rgba(10, 26, 31, 0.34); }
+.whatsapp-float svg { width: 28px; height: 28px; }
+@media (max-width: 640px) {
+  .whatsapp-float { right: var(--sp-4); bottom: var(--sp-4); width: 50px; height: 50px; }
+  .whatsapp-float svg { width: 25px; height: 25px; }
+}
+@media (prefers-reduced-motion: reduce) { .whatsapp-float { transition: none; } }
+
+/* ==========================================================================
    FDS — filtro de produtos + lista de documentos
    ========================================================================== */
 .doc-filter { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
