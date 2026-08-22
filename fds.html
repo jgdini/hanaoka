@@ -56,7 +56,7 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Início</a> / <span>FDS</span></nav>
       <span class="eyebrow">Documentação técnica</span>
       <h1>Fichas de Dados de Segurança.</h1>
-      <p>Acesse as FDS dos nossos produtos — informações essenciais sobre manuseio, armazenamento, transporte e primeiros socorros, organizadas por produto, grau e concentração.</p>
+      <p>Baixe as Especificações Técnicas dos nossos produtos — parâmetros analíticos, grau e concentração, prontos para download em PDF. As Fichas de Dados de Segurança (FDS), com informações de manuseio, armazenamento, transporte e primeiros socorros, estão em preparação.</p>
     </div>
   </section>
 
@@ -65,169 +65,670 @@
 
       <div class="doc-filter reveal">
         <button class="doc-filter__btn is-active" data-doc-filter="todos">Todos</button>
-        <button class="doc-filter__btn" data-doc-filter="acido-sulfurico">Ácido Sulfúrico</button>
-        <button class="doc-filter__btn" data-doc-filter="acido-nitrico">Ácido Nítrico</button>
-        <button class="doc-filter__btn" data-doc-filter="acido-cloridrico">Ácido Clorídrico</button>
+        <button class="doc-filter__btn" data-doc-filter="acetato-de-potassio">Acetato de Potássio</button>
+        <button class="doc-filter__btn" data-doc-filter="acido-acetico">Ácido Acético</button>
         <button class="doc-filter__btn" data-doc-filter="acido-citrico">Ácido Cítrico</button>
-        <button class="doc-filter__btn" data-doc-filter="acido-tartarico">Ácido Tartárico</button>
-        <button class="doc-filter__btn" data-doc-filter="bicarbonato-de-sodio">Bicarbonato de Sódio</button>
-        <button class="doc-filter__btn" data-doc-filter="hipoclorito-de-sodio">Hipoclorito de Sódio</button>
-        <button class="doc-filter__btn" data-doc-filter="cloreto-ferrico">Cloreto Férrico</button>
-        <button class="doc-filter__btn" data-doc-filter="iodeto-de-potassio">Iodeto de Potássio PA</button>
-        <button class="doc-filter__btn" data-doc-filter="silica-gel">Sílica Gel</button>
-        <button class="doc-filter__btn" data-doc-filter="estanho">Estanho</button>
-        <button class="doc-filter__btn" data-doc-filter="hidroxido-de-sodio">Hidróxido de Sódio</button>
+        <button class="doc-filter__btn" data-doc-filter="acido-cloridrico">Ácido Clorídrico</button>
         <button class="doc-filter__btn" data-doc-filter="acido-fosforico">Ácido Fosfórico</button>
+        <button class="doc-filter__btn" data-doc-filter="acido-nitrico">Ácido Nítrico</button>
+        <button class="doc-filter__btn" data-doc-filter="acido-sulfurico">Ácido Sulfúrico</button>
+        <button class="doc-filter__btn" data-doc-filter="acido-tartarico">Ácido Tartárico</button>
+        <button class="doc-filter__btn" data-doc-filter="agua">Água</button>
+        <button class="doc-filter__btn" data-doc-filter="alcool-etilico">Álcool Etílico</button>
+        <button class="doc-filter__btn" data-doc-filter="alcool-isopropilico">Álcool Isopropílico</button>
+        <button class="doc-filter__btn" data-doc-filter="bicarbonato-de-sodio">Bicarbonato de Sódio</button>
+        <button class="doc-filter__btn" data-doc-filter="cal">Cal</button>
+        <button class="doc-filter__btn" data-doc-filter="carbonato-de-sodio">Carbonato de Sódio</button>
+        <button class="doc-filter__btn" data-doc-filter="cloreto-de-sodio">Cloreto de Sódio</button>
+        <button class="doc-filter__btn" data-doc-filter="cloreto-ferrico">Cloreto Férrico</button>
+        <button class="doc-filter__btn" data-doc-filter="edta-dissodico">EDTA Dissódico</button>
+        <button class="doc-filter__btn" data-doc-filter="estanho">Estanho</button>
+        <button class="doc-filter__btn" data-doc-filter="hidroxido-de-amonio">Hidróxido de Amônio</button>
+        <button class="doc-filter__btn" data-doc-filter="hidroxido-de-potassio">Hidróxido de Potássio</button>
+        <button class="doc-filter__btn" data-doc-filter="hidroxido-de-sodio">Hidróxido de Sódio</button>
+        <button class="doc-filter__btn" data-doc-filter="hipoclorito-de-sodio">Hipoclorito de Sódio</button>
+        <button class="doc-filter__btn" data-doc-filter="iodeto-de-potassio">Iodeto de Potássio</button>
+        <button class="doc-filter__btn" data-doc-filter="nitrato-de-prata">Nitrato de Prata</button>
+        <button class="doc-filter__btn" data-doc-filter="nitrito-de-sodio">Nitrito de Sódio</button>
+        <button class="doc-filter__btn" data-doc-filter="peroxido-de-hidrogenio">Peróxido de Hidrogênio</button>
+        <button class="doc-filter__btn" data-doc-filter="policloreto-de-aluminio">Policloreto de Alumínio</button>
+        <button class="doc-filter__btn" data-doc-filter="silica-gel">Sílica Gel</button>
+        <button class="doc-filter__btn" data-doc-filter="solucao-acida-fosfosulfurica">Solução Ácida Fosfossulfúrica</button>
         <button class="doc-filter__btn" data-doc-filter="sulfato-de-aluminio">Sulfato de Alumínio</button>
-        <button class="doc-filter__btn" data-doc-filter="solucao-acida-fosfosulfurica">Solução Ácida Fosfosulfúrica</button>
+        <button class="doc-filter__btn" data-doc-filter="sulfato-de-prata">Sulfato de Prata</button>
         <button class="doc-filter__btn" data-doc-filter="zinco">Zinco</button>
       </div>
 
       <div class="doc-list">
 
-        <div class="doc-row" data-product="acido-sulfurico">
-          <span class="doc-row__icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg>
-          </span>
-          <span class="doc-row__title">FDS-001 — Ácido Sulfúrico PA-ACS 98%<span class="doc-row__meta">N° 01 · Português</span></span>
-          <span class="doc-row__action">Em breve</span>
+        <div class="doc-row" data-product="acetato-de-potassio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-270 — Acetato de Potássio PA<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-270-acetato-de-potassio-pa.pdf" download aria-label="Baixar especificação técnica — Acetato de Potássio PA">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="acido-sulfurico">
+        <div class="doc-row" data-product="acido-acetico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">FDS-002 — Ácido Sulfúrico Técnico 98%<span class="doc-row__meta">N° 02 · Português</span></span>
-          <span class="doc-row__action">Em breve</span>
-        </div>
-
-        <div class="doc-row" data-product="acido-sulfurico">
-          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">FDS-002 — Ácido Sulfúrico Técnico 98% (English)<span class="doc-row__meta">N° 02 · Inglês</span></span>
-          <span class="doc-row__action">Em breve</span>
-        </div>
-
-        <div class="doc-row" data-product="acido-sulfurico">
-          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">FDS-003 — Ácido Sulfúrico QP 98%<span class="doc-row__meta">N° 03 · Português</span></span>
-          <span class="doc-row__action">Em breve</span>
-        </div>
-
-        <div class="doc-row" data-product="acido-sulfurico">
-          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">FDS-004 — Ácido Sulfúrico Técnico 78%<span class="doc-row__meta">N° 04 · Português</span></span>
-          <span class="doc-row__action">Em breve</span>
-        </div>
-
-        <div class="doc-row" data-product="acido-sulfurico">
-          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">FDS-004 — Ácido Sulfúrico Técnico 78% (English)<span class="doc-row__meta">N° 04 · Inglês</span></span>
-          <span class="doc-row__action">Em breve</span>
-        </div>
-
-        <div class="doc-row" data-product="acido-sulfurico">
-          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">FDS-004 — Ácido Sulfúrico Técnico 78% (Español)<span class="doc-row__meta">N° 04 · Espanhol</span></span>
-          <span class="doc-row__action">Em breve</span>
-        </div>
-
-        <div class="doc-row" data-product="acido-sulfurico">
-          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">FDS-006 — Ácido Sulfúrico Técnico 70%<span class="doc-row__meta">N° 06 · Português</span></span>
-          <span class="doc-row__action">Em breve</span>
-        </div>
-
-        <div class="doc-row" data-product="acido-nitrico">
-          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Ácido Nítrico<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
-        </div>
-
-        <div class="doc-row" data-product="acido-cloridrico">
-          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Ácido Clorídrico<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-263 — Ácido Acético Glacial<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-263-acido-acetico-glacial.pdf" download aria-label="Baixar especificação técnica — Ácido Acético Glacial">Baixar PDF</a>
         </div>
 
         <div class="doc-row" data-product="acido-citrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Ácido Cítrico<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-102 — Ácido Cítrico Anidro - Nacional<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-102-acido-citrico-anidro-nacional.pdf" download aria-label="Baixar especificação técnica — Ácido Cítrico Anidro - Nacional">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="acido-tartarico">
+        <div class="doc-row" data-product="acido-citrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Ácido Tartárico<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-141 — Ácido Cítrico 50%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-141-acido-citrico-50.pdf" download aria-label="Baixar especificação técnica — Ácido Cítrico 50%">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="bicarbonato-de-sodio">
+        <div class="doc-row" data-product="acido-citrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Bicarbonato de Sódio<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-151 — Ácido Cítrico Anidro - Importado<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-151-acido-citrico-anidro-importado.pdf" download aria-label="Baixar especificação técnica — Ácido Cítrico Anidro - Importado">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="hipoclorito-de-sodio">
+        <div class="doc-row" data-product="acido-cloridrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Hipoclorito de Sódio<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-001 — Ácido Clorídrico PA 30% (V/V)<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-001-acido-cloridrico-pa-30-v-v.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico PA 30% (V/V)">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="cloreto-ferrico">
+        <div class="doc-row" data-product="acido-cloridrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Cloreto Férrico<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-003 — Ácido Clorídrico PA-ACS 37%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-003-acido-cloridrico-pa-acs-37.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico PA-ACS 37%">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="iodeto-de-potassio">
+        <div class="doc-row" data-product="acido-cloridrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Iodeto de Potássio PA<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-004 — Ácido Clorídrico PA 37%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-004-acido-cloridrico-pa-37.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico PA 37%">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="silica-gel">
+        <div class="doc-row" data-product="acido-cloridrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança da Sílica Gel<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-006 — Ácido Clorídrico QP 32-33%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-006-acido-cloridrico-qp-32-33.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico QP 32-33%">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="estanho">
+        <div class="doc-row" data-product="acido-cloridrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Estanho<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-011 — Ácido Clorídrico Técnico 32-33%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-011-acido-cloridrico-tecnico-32-33.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico Técnico 32-33%">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="hidroxido-de-sodio">
+        <div class="doc-row" data-product="acido-cloridrico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Hidróxido de Sódio<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-078 — Ácido Clorídrico PA 30%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-078-acido-cloridrico-pa-30.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico PA 30%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-cloridrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-110 — Ácido Clorídrico PA 22%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-110-acido-cloridrico-pa-22.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico PA 22%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-cloridrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-188 — Ácido Clorídrico PA 35%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-188-acido-cloridrico-pa-35.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico PA 35%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-cloridrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-261 — Ácido Clorídrico Técnico 10%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-261-acido-cloridrico-tecnico-10.pdf" download aria-label="Baixar especificação técnica — Ácido Clorídrico Técnico 10%">Baixar PDF</a>
         </div>
 
         <div class="doc-row" data-product="acido-fosforico">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Ácido Fosfórico<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-012 — Ácido Fosfórico Food Grade<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-012-acido-fosforico-food-grade.pdf" download aria-label="Baixar especificação técnica — Ácido Fosfórico Food Grade">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-fosforico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-267 — Ácido Fosfórico 54%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-267-acido-fosforico-54.pdf" download aria-label="Baixar especificação técnica — Ácido Fosfórico 54%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-016 — Ácido Nítrico 25%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-016-acido-nitrico-25.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico 25%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-017 — Ácido Nítrico 36°Bé<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-017-acido-nitrico-36-be.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico 36°Bé">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-020 — Ácido Nítrico 36ºBé<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-020-acido-nitrico-36obe.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico 36ºBé">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-023 — Ácido Nítrico 40°Bé (61%)<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-023-acido-nitrico-40-be-61.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico 40°Bé (61%)">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-025 — Ácido Nítrico 42ºBé<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-025-acido-nitrico-42obe.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico 42ºBé">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-029 — Ácido Nítrico 43,5ºBé<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-029-acido-nitrico-43-5obe.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico 43,5ºBé">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-030 — Ácido Nítrico PA-ACS 70%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-030-acido-nitrico-pa-acs-70.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico PA-ACS 70%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-031 — Ácido Nítrico 99%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-031-acido-nitrico-99.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico 99%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-033 — Ácido Nítrico PA 65%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-033-acido-nitrico-pa-65.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico PA 65%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-036 — Ácido Nítrico PA 70%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-036-acido-nitrico-pa-70.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico PA 70%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-037 — Ácido Nítrico QP 42ºBé<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-037-acido-nitrico-qp-42obe.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico QP 42ºBé">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-043 — Ácido Nítrico Técnico 69%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-043-acido-nitrico-tecnico-69.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico Técnico 69%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-180 — Ácido Nítrico Fumegante 99,5%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-180-acido-nitrico-fumegante-99-5.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico Fumegante 99,5%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-233 — Ácido Nítrico 27%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-233-acido-nitrico-27.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico 27%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-nitrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-249 — Ácido Nítrico Técnico 54%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-249-acido-nitrico-tecnico-54.pdf" download aria-label="Baixar especificação técnica — Ácido Nítrico Técnico 54%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-019 — Ácido Sulfúrico Técnico 69%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-019-acido-sulfurico-tecnico-69.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico 69%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-044 — Ácido Sulfúrico PA 98%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-044-acido-sulfurico-pa-98.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico PA 98%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-046 — Ácido Sulfúrico Leite<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-046-acido-sulfurico-leite.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Leite">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-048 — Ácido Sulfúrico PA-ACS 98%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-048-acido-sulfurico-pa-acs-98.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico PA-ACS 98%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-049 — Ácido Sulfúrico PA 60% (g/L)<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-049-acido-sulfurico-pa-60-g-l.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico PA 60% (g/L)">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-053 — Ácido Sulfúrico QP 50%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-053-acido-sulfurico-qp-50.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico QP 50%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-054 — Ácido Sulfúrico QP 60%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-054-acido-sulfurico-qp-60.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico QP 60%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-055 — Ácido Sulfúrico QP 98%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-055-acido-sulfurico-qp-98.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico QP 98%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-068 — Ácido Sulfúrico Técnico Solução 50%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-068-acido-sulfurico-tecnico-solucao-50.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico Solução 50%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-072 — Ácido Sulfúrico Técnico Solução 65%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-072-acido-sulfurico-tecnico-solucao-65.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico Solução 65%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-074 — Ácido Sulfúrico Técnico Solução 78%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-074-acido-sulfurico-tecnico-solucao-78.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico Solução 78%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-077 — Ácido Sulfúrico Técnico 98%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-077-acido-sulfurico-tecnico-98.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico 98%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-116 — Ácido Sulfúrico QP 50%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-116-acido-sulfurico-qp-50.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico QP 50%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-122 — Ácido Sulfúrico 70%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-122-acido-sulfurico-70.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico 70%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-123 — Ácido Sulfúrico 37%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-123-acido-sulfurico-37.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico 37%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-134 — Ácido Sulfúrico Técnico 98%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-134-acido-sulfurico-tecnico-98.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico 98%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-135 — Ácido Sulfúrico Técnico Solução 40%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-135-acido-sulfurico-tecnico-solucao-40.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico Solução 40%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-137 — Ácido Sulfúrico Técnico 69%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-137-acido-sulfurico-tecnico-69.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico 69%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-145 — Ácido Sulfúrico Técnico Solução 72%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-145-acido-sulfurico-tecnico-solucao-72.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico Solução 72%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-163 — Ácido Sulfúrico Técnico 32%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-163-acido-sulfurico-tecnico-32.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico Técnico 32%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-168 — Ácido Sulfúrico PA 50%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-168-acido-sulfurico-pa-50.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico PA 50%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-178 — Sulfato de Prata em Ácido Sulfúrico<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-178-sulfato-de-prata-em-acido-sulfurico.pdf" download aria-label="Baixar especificação técnica — Sulfato de Prata em Ácido Sulfúrico">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-sulfurico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-232 — Ácido Sulfúrico 42%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-232-acido-sulfurico-42.pdf" download aria-label="Baixar especificação técnica — Ácido Sulfúrico 42%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="acido-tartarico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-160 — Ácido Tartárico<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-160-acido-tartarico.pdf" download aria-label="Baixar especificação técnica — Ácido Tartárico">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="agua">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-203 — Água Deionizada<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-203-agua-deionizada.pdf" download aria-label="Baixar especificação técnica — Água Deionizada">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="agua">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-204 — Água Destilada<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-204-agua-destilada.pdf" download aria-label="Baixar especificação técnica — Água Destilada">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="agua">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-205 — Água Desmineralizada Automotiva<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-205-agua-desmineralizada-automotiva.pdf" download aria-label="Baixar especificação técnica — Água Desmineralizada Automotiva">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="alcool-etilico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-235 — Álcool Etílico Anidro Neutro<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-235-alcool-etilico-anidro-neutro.pdf" download aria-label="Baixar especificação técnica — Álcool Etílico Anidro Neutro">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="alcool-etilico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-251 — Álcool Etílico 95% PA-ACS<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-251-alcool-etilico-95-pa-acs.pdf" download aria-label="Baixar especificação técnica — Álcool Etílico 95% PA-ACS">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="alcool-etilico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-268 — Álcool Etílico Absoluto PA<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-268-alcool-etilico-absoluto-pa.pdf" download aria-label="Baixar especificação técnica — Álcool Etílico Absoluto PA">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="alcool-isopropilico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-265 — Álcool Isopropílico<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-265-alcool-isopropilico.pdf" download aria-label="Baixar especificação técnica — Álcool Isopropílico">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="alcool-isopropilico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-269 — Álcool Isopropílico PA-ACS<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-269-alcool-isopropilico-pa-acs.pdf" download aria-label="Baixar especificação técnica — Álcool Isopropílico PA-ACS">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="bicarbonato-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-103 — Bicarbonato de Sódio Grau Alimentício - Nacional<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-103-bicarbonato-de-sodio-grau-alimenticio-nacional.pdf" download aria-label="Baixar especificação técnica — Bicarbonato de Sódio Grau Alimentício - Nacional">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="bicarbonato-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-181 — Bicarbonato de Sódio Grau Alimentício - Importado<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-181-bicarbonato-de-sodio-grau-alimenticio-importado.pdf" download aria-label="Baixar especificação técnica — Bicarbonato de Sódio Grau Alimentício - Importado">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="bicarbonato-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-201 — Bicarbonato de Sódio Técnico<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-201-bicarbonato-de-sodio-tecnico.pdf" download aria-label="Baixar especificação técnica — Bicarbonato de Sódio Técnico">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="bicarbonato-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-245 — Bicarbonato de Sódio Extra Fino<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-245-bicarbonato-de-sodio-extra-fino.pdf" download aria-label="Baixar especificação técnica — Bicarbonato de Sódio Extra Fino">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="bicarbonato-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-259 — Bicarbonato de Sódio Alimentício Extra Fino<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-259-bicarbonato-de-sodio-alimenticio-extra-fino.pdf" download aria-label="Baixar especificação técnica — Bicarbonato de Sódio Alimentício Extra Fino">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="bicarbonato-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-266 — Bicarbonato de Sódio PA<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-266-bicarbonato-de-sodio-pa.pdf" download aria-label="Baixar especificação técnica — Bicarbonato de Sódio PA">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="cal">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-091 — Cal Hidratada<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-091-cal-hidratada.pdf" download aria-label="Baixar especificação técnica — Cal Hidratada">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="cal">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-170 — Cal Virgem<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-170-cal-virgem.pdf" download aria-label="Baixar especificação técnica — Cal Virgem">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="carbonato-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-230 — Carbonato de Sódio - Barrilha Leve<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-230-carbonato-de-sodio-barrilha-leve.pdf" download aria-label="Baixar especificação técnica — Carbonato de Sódio - Barrilha Leve">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="cloreto-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-206 — Cloreto de Sódio PA<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-206-cloreto-de-sodio-pa.pdf" download aria-label="Baixar especificação técnica — Cloreto de Sódio PA">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="cloreto-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-254 — Cloreto de Sódio<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-254-cloreto-de-sodio.pdf" download aria-label="Baixar especificação técnica — Cloreto de Sódio">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="cloreto-ferrico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-193 — Cloreto Férrico<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-193-cloreto-ferrico.pdf" download aria-label="Baixar especificação técnica — Cloreto Férrico">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="edta-dissodico">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-236 — EDTA Dissódico<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-236-edta-dissodico.pdf" download aria-label="Baixar especificação técnica — EDTA Dissódico">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="estanho">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-159 — Estanho 20 Mesh<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-159-estanho-20-mesh.pdf" download aria-label="Baixar especificação técnica — Estanho 20 Mesh">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="hidroxido-de-amonio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-215 — Hidróxido de Amônio 24-25%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-215-hidroxido-de-amonio-24-25.pdf" download aria-label="Baixar especificação técnica — Hidróxido de Amônio 24-25%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="hidroxido-de-potassio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-175 — Hidróxido de Potássio Solução 50%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-175-hidroxido-de-potassio-solucao-50.pdf" download aria-label="Baixar especificação técnica — Hidróxido de Potássio Solução 50%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="hidroxido-de-potassio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-192 — Hidróxido de Potássio em Escamas 90%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-192-hidroxido-de-potassio-em-escamas-90.pdf" download aria-label="Baixar especificação técnica — Hidróxido de Potássio em Escamas 90%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="hidroxido-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-086 — Hidróxido de Sódio Solução 50%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-086-hidroxido-de-sodio-solucao-50.pdf" download aria-label="Baixar especificação técnica — Hidróxido de Sódio Solução 50%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="hidroxido-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-087 — Hidróxido de Sódio em Escamas Grau Rayon<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-087-hidroxido-de-sodio-em-escamas-grau-rayon.pdf" download aria-label="Baixar especificação técnica — Hidróxido de Sódio em Escamas Grau Rayon">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="hidroxido-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-187 — Hidróxido de Sódio em Pérolas PA<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-187-hidroxido-de-sodio-em-perolas-pa.pdf" download aria-label="Baixar especificação técnica — Hidróxido de Sódio em Pérolas PA">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="hidroxido-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-208 — Hidróxido de Sódio em Pérolas 99%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-208-hidroxido-de-sodio-em-perolas-99.pdf" download aria-label="Baixar especificação técnica — Hidróxido de Sódio em Pérolas 99%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="hipoclorito-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-120 — Hipoclorito de Sódio<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-120-hipoclorito-de-sodio.pdf" download aria-label="Baixar especificação técnica — Hipoclorito de Sódio">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="iodeto-de-potassio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-198 — Iodeto de Potássio PA<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-198-iodeto-de-potassio-pa.pdf" download aria-label="Baixar especificação técnica — Iodeto de Potássio PA">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="nitrato-de-prata">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-173 — Nitrato de Prata PA-ACS<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-173-nitrato-de-prata-pa-acs.pdf" download aria-label="Baixar especificação técnica — Nitrato de Prata PA-ACS">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="nitrato-de-prata">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-184 — Solução Nitrato de Prata 0,1N 0,1M<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-184-solucao-nitrato-de-prata-0-1n-0-1m.pdf" download aria-label="Baixar especificação técnica — Solução Nitrato de Prata 0,1N 0,1M">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="nitrato-de-prata">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-256 — Nitrato de Prata 63,5%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-256-nitrato-de-prata-63-5.pdf" download aria-label="Baixar especificação técnica — Nitrato de Prata 63,5%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="nitrito-de-sodio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-252 — Nitrito de Sódio<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-252-nitrito-de-sodio.pdf" download aria-label="Baixar especificação técnica — Nitrito de Sódio">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="peroxido-de-hidrogenio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-221 — Peróxido de Hidrogênio 50%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-221-peroxido-de-hidrogenio-50.pdf" download aria-label="Baixar especificação técnica — Peróxido de Hidrogênio 50%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="peroxido-de-hidrogenio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-231 — Peróxido de Hidrogênio 35%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-231-peroxido-de-hidrogenio-35.pdf" download aria-label="Baixar especificação técnica — Peróxido de Hidrogênio 35%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="policloreto-de-aluminio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-140 — Policloreto de Alumínio 18%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-140-policloreto-de-aluminio-18.pdf" download aria-label="Baixar especificação técnica — Policloreto de Alumínio 18%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="policloreto-de-aluminio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-217 — Policloreto de Alumínio 18%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-217-policloreto-de-aluminio-18.pdf" download aria-label="Baixar especificação técnica — Policloreto de Alumínio 18%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="policloreto-de-aluminio">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-218 — Policloreto de Alumínio 12%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-218-policloreto-de-aluminio-12.pdf" download aria-label="Baixar especificação técnica — Policloreto de Alumínio 12%">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="silica-gel">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-219 — Sílica Gel Azul 1-4 mm PA-ACS<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-219-silica-gel-azul-1-4-mm-pa-acs.pdf" download aria-label="Baixar especificação técnica — Sílica Gel Azul 1-4 mm PA-ACS">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="silica-gel">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-220 — Sílica Gel Azul 4-8 mm PA-ACS<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-220-silica-gel-azul-4-8-mm-pa-acs.pdf" download aria-label="Baixar especificação técnica — Sílica Gel Azul 4-8 mm PA-ACS">Baixar PDF</a>
         </div>
 
         <div class="doc-row" data-product="sulfato-de-aluminio">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Sulfato de Alumínio<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-153 — Sulfato de Alumínio Isento em Ferro (líquido)<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-153-sulfato-de-aluminio-isento-em-ferro-liquido.pdf" download aria-label="Baixar especificação técnica — Sulfato de Alumínio Isento em Ferro (líquido)">Baixar PDF</a>
         </div>
 
-        <div class="doc-row" data-product="solucao-acida-fosfosulfurica">
+        <div class="doc-row" data-product="sulfato-de-aluminio">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança da Solução Ácida Fosfosulfúrica<span class="doc-row__meta">Em preparação</span></span>
-          <a class="doc-row__action" href="contato.html">Solicitar</a>
+          <span class="doc-row__title">ESP-157 — Sulfato de Alumínio Isento em Ferro (pó)<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-157-sulfato-de-aluminio-isento-em-ferro-po.pdf" download aria-label="Baixar especificação técnica — Sulfato de Alumínio Isento em Ferro (pó)">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="sulfato-de-prata">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-199 — Sulfato de Prata PA-ACS<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-199-sulfato-de-prata-pa-acs.pdf" download aria-label="Baixar especificação técnica — Sulfato de Prata PA-ACS">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="sulfato-de-prata">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-257 — Sulfato de Prata 69,2%<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-257-sulfato-de-prata-69-2.pdf" download aria-label="Baixar especificação técnica — Sulfato de Prata 69,2%">Baixar PDF</a>
         </div>
 
         <div class="doc-row" data-product="zinco">
           <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <span class="doc-row__title">Ficha de segurança do Zinco<span class="doc-row__meta">Em preparação</span></span>
+          <span class="doc-row__title">ESP-095 — Zinco Granulado 20 Mesh<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-095-zinco-granulado-20-mesh.pdf" download aria-label="Baixar especificação técnica — Zinco Granulado 20 Mesh">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="zinco">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">ESP-096 — Zinco Granulado 3 a 8 mm<span class="doc-row__meta">Especificação Técnica · Português</span></span>
+          <a class="doc-row__action doc-row__action--download" href="assets/pdfs/especificacoes/esp-096-zinco-granulado-3-a-8-mm.pdf" download aria-label="Baixar especificação técnica — Zinco Granulado 3 a 8 mm">Baixar PDF</a>
+        </div>
+
+        <div class="doc-row" data-product="solucao-acida-fosfosulfurica">
+          <span class="doc-row__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4l4 11a2 2 0 0 1-2 3H5a2 2 0 0 1-2-3l4-11V3Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span class="doc-row__title">Solução Ácida Fosfossulfúrica<span class="doc-row__meta">Em preparação</span></span>
           <a class="doc-row__action" href="contato.html">Solicitar</a>
         </div>
 
+
       </div>
 
-      <p class="product-index__note">Biblioteca completa de FDS (PT/EN/ES, por grau e concentração) será migrada dos arquivos originais antes da publicação. Precisa de uma ficha específica agora? <a href="contato.html" style="text-decoration: underline;">fale com a gente →</a></p>
+      <p class="product-index__note">Especificações Técnicas (ESP) disponíveis para a maior parte da linha de produtos. As Fichas de Dados de Segurança (FDS) completas serão publicadas em breve. Precisa de uma ficha específica agora? <a href="contato.html" style="text-decoration: underline;">fale com a gente →</a></p>
     </div>
   </section>
 
