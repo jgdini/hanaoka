@@ -276,15 +276,12 @@ html.is-loading .hero *{animation-play-state:paused!important}
   .col-r p{max-width:100%!important}
 }
 @media(max-width:767px){
-  #produtos{height:auto!important;padding:72px 0 56px}
-  #produtos>div{position:relative!important;height:auto!important;top:auto!important;gap:28px;overflow:visible!important}
-  #produtos>div>div:first-child{padding:0 20px}
-  #ptrack{transform:none!important;width:auto!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:8px 20px 20px!important;gap:16px!important;scrollbar-width:none}
-  #ptrack::-webkit-scrollbar{display:none}
-  #ptrack .pcard{--s:1;opacity:1;scroll-snap-align:center;width:78vw;min-width:260px;height:auto;min-height:0;flex:none}
-  #ptrack .pimg{height:260px}
-  #produtos #pbar{display:none}
-  #produtos>div>p{padding:0 20px}
+  #produtos{height:300vh}
+  #produtos>div{height:100svh;gap:18px;padding-top:72px;padding-bottom:16px;justify-content:flex-start}
+  #produtos .pcard{height:auto;min-height:0;padding:14px;gap:12px}
+  #produtos .pimg{flex:none;height:40svh}
+  #produtos .pimg img{height:90%}
+  #produtos .pinfo h3{font-size:1.4rem}
 }
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -331,7 +328,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
   <!-- HEADER: logo à esquerda, links ao centro, redes à direita -->
   <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
     <div class="relative flex items-center justify-between px-4 md:px-4 py-4">
-      <a href="#" aria-label="Hanaoka PureLab" class="reveal shrink-0"><img src="hanaoka-purelab-logo-white.webp" alt="Hanaoka PureLab" class="h-10 w-auto"></a>
+      <a href="#" aria-label="Hanaoka PureLab" class="reveal shrink-0"><img src="hanaoka-purelab-logo-white.webp" alt="Hanaoka PureLab" class="h-10 w-auto self-start"></a>
       <nav aria-label="Principal" class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
         <a class="nav-link" href="#produtos">Reagentes</a>
         <a class="nav-link" href="#qualidade">Qualidade</a>
@@ -584,8 +581,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
 (function(){
   var v=document.querySelector('.hero video'); if(!v) return;
   var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var sd=navigator.connection&&navigator.connection.saveData;
-  if(rm||sd){v.remove();return}
+  if(rm){v.remove();return}
   v.muted=true; var p=v.play(); if(p&&p.catch)p.catch(function(){});
   document.addEventListener('visibilitychange',function(){document.hidden?v.pause():v.play().catch(function(){})});
 })();
@@ -675,7 +671,7 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
 // produtos: o trilho anda na horizontal conforme a rolagem; o card no centro cresce
 (function(){
   var sec=document.getElementById('produtos'), track=document.getElementById('ptrack'), bar=document.getElementById('pbar');
-  if(!sec||!track||innerWidth<768||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!sec||!track||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var cards=[].slice.call(track.querySelectorAll('.pcard'));
   var ticking=false;
   var upd=function(){
