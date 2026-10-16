@@ -79,6 +79,7 @@ body{margin:0;background:var(--petrol-900);color:#fff;font-family:Inter,system-u
 .shim{position:relative;overflow:hidden}
 .shim::after{content:"";position:absolute;top:0;left:0;bottom:0;width:38%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-130%) skewX(-15deg);pointer-events:none;z-index:3}
 .shim:hover::after{animation:shimmer 1s var(--ease-out)}
+.shim.shim-go::after{animation:shimmer 1s var(--ease-out)}
 .skip{position:absolute;left:-999px;top:8px;background:#fff;color:#041C26;padding:8px 14px;border-radius:8px;z-index:100}
 .skip:focus{left:8px}
 :focus-visible{outline:2px solid var(--aqua-300);outline-offset:3px}
@@ -265,6 +266,26 @@ html.is-loading .hero *{animation-play-state:paused!important}
 .mq i{font-style:normal;color:var(--aqua-300);font-size:12px}
 @media(prefers-reduced-motion:reduce){.rv-s{opacity:1;transform:none}}
 @media(min-width:1024px){.col-r{padding-top:clamp(0px,16vh,220px)}}
+
+/* celular: títulos quebram linha, textos cabem na tela e produtos viram carrossel com rolagem lateral */
+@media(max-width:1023px){
+  .h1{white-space:normal;font-size:clamp(2.1rem,10vw,3.2rem);line-height:.98}
+  .cols{padding-top:6.5rem}
+  .col-l,.col-r{width:100%;max-width:100%}
+  .col-l>*,.col-r>*{max-width:100%}
+  .col-r p{max-width:100%!important}
+}
+@media(max-width:767px){
+  #produtos{height:auto!important;padding:72px 0 56px}
+  #produtos>div{position:relative!important;height:auto!important;top:auto!important;gap:28px;overflow:visible!important}
+  #produtos>div>div:first-child{padding:0 20px}
+  #ptrack{transform:none!important;width:auto!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:8px 20px 20px!important;gap:16px!important;scrollbar-width:none}
+  #ptrack::-webkit-scrollbar{display:none}
+  #ptrack .pcard{--s:1;opacity:1;scroll-snap-align:center;width:78vw;min-width:260px;height:auto;min-height:0;flex:none}
+  #ptrack .pimg{height:260px}
+  #produtos #pbar{display:none}
+  #produtos>div>p{padding:0 20px}
+}
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
  .reveal,.mask>span{opacity:1;transform:none;filter:none}
@@ -654,7 +675,7 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
 // produtos: o trilho anda na horizontal conforme a rolagem; o card no centro cresce
 (function(){
   var sec=document.getElementById('produtos'), track=document.getElementById('ptrack'), bar=document.getElementById('pbar');
-  if(!sec||!track||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!sec||!track||innerWidth<768||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var cards=[].slice.call(track.querySelectorAll('.pcard'));
   var ticking=false;
   var upd=function(){
@@ -704,6 +725,14 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
   if(!footer) return;
   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ document.documentElement.classList.toggle('floats-hidden', e.isIntersecting) }) },{threshold:.15});
   io.observe(footer);
+})();
+</script>
+<script>
+// celular (sem mouse): o brilho dos cards roda uma vez quando o card aparece na tela
+(function(){
+  if(!matchMedia("(hover: none)").matches) return;
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("shim-go"); io.unobserve(e.target) } }) },{threshold:.5});
+  document.querySelectorAll(".shim").forEach(function(el){ io.observe(el) });
 })();
 </script>
 </body>
