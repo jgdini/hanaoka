@@ -101,12 +101,12 @@ body{margin:0;background:var(--petrol-900);color:#fff;font-family:Inter,system-u
 .reveal{opacity:0;transform:translateY(28px);filter:blur(6px);animation:rv 1s var(--ease-out) forwards}
 @keyframes rv{to{opacity:1;transform:none;filter:none}}
 .d1{animation-delay:.15s}.d2{animation-delay:.3s}.d3{animation-delay:.45s}.d4{animation-delay:.6s}.d5{animation-delay:.8s}.d6{animation-delay:1s}
-.mask{display:block;overflow:hidden;padding-bottom:.08em}
+.mask{display:block;overflow:hidden;padding:.12em 0 .08em;margin:-.12em 0 -.08em}
 .mask>span{display:block;transform:translateY(105%);animation:up 1.1s var(--ease-out) forwards}
 @keyframes up{to{transform:none}}
 
 /* tipografia */
-.h1{font-weight:600;text-transform:uppercase;letter-spacing:-.045em;line-height:.9;font-size:clamp(2.6rem,5.8vw,7rem);white-space:nowrap;color:rgba(255,255,255,.86)}
+.h1{font-weight:600;text-transform:uppercase;letter-spacing:-.045em;line-height:.9;font-size:clamp(2.2rem,4.9vw,5.6rem);white-space:nowrap;color:rgba(255,255,255,.86)}
 .h2{font-weight:500;text-transform:uppercase;letter-spacing:-.03em;line-height:1.1;font-size:clamp(1.4rem,2.2vw,2.1rem)}
 .h2 i{font-style:normal;color:var(--aqua)}
 
@@ -247,7 +247,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 /* efeitos de texto do design system: revelação com máscara, slide de letras, lettering e marquee */
 .delay-300{transition-delay:.3s}.delay-500{transition-delay:.5s}
-.text-reveal-wrapper{overflow:hidden;display:inline-block;vertical-align:bottom}
+.text-reveal-wrapper{overflow:hidden;display:inline-block;vertical-align:bottom;padding:.14em .04em 0;margin:-.14em -.04em 0}
 .text-reveal-content{transform:translateY(110%);opacity:0;transition:transform 1.2s var(--ease-out),opacity 1.2s ease;display:block}
 .reveal-active .text-reveal-content{transform:translateY(0);opacity:1}
 @keyframes textSlide{0%{transform:translateY(110%);opacity:0}100%{transform:translateY(0);opacity:1}}
@@ -358,9 +358,9 @@ html.is-loading .hero *{animation-play-state:paused!important}
       <div class="w-full">
         <h1 class="h1">
           <span class="sr-only">Reagentes P.A. para laticínios: </span>
-          <span class="mask"><span style="animation-delay:.35s">Pureza que</span></span>
-          <span class="mask"><span style="animation-delay:.5s">o seu laboratório</span></span>
-          <span class="mask"><span style="animation-delay:.65s">pode medir</span></span>
+          <span class="mask"><span style="animation-delay:.35s">Pureza que o seu</span></span>
+          <span class="mask"><span style="animation-delay:.5s">laboratório</span></span>
+          <span class="mask"><span style="animation-delay:.65s">pode confiar</span></span>
         </h1>
         <div class="cta-wrap reveal d5 mt-8">
           <a class="cta" href="https://wa.me/5511973147630?text=Ol%C3%A1%2C%20quero%20cotar%20reagentes%20para%20laborat%C3%B3rio%20de%20latic%C3%ADnios" aria-label="Solicitar cotação pelo WhatsApp" data-magnetic>
