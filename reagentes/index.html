@@ -234,6 +234,8 @@ html.is-loading .hero *{animation-play-state:paused!important}
 .floats-hidden .wa-float,.floats-hidden .home-float{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(14px)}
 .halo-credit:hover .halo-sym{transform:rotate(120deg)}
 .halo-sym{transition:transform .8s var(--ease-out)}
+.vid-tap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;width:64px;height:64px;border-radius:999px;border:1px solid rgba(255,255,255,.7);background:rgba(4,28,38,.55);color:#fff;font-size:20px;display:grid;place-items:center;backdrop-filter:blur(8px);cursor:pointer}
+.vid-tap:hover{background:#fff;color:#073042}
 /* botão Início, acima do WhatsApp */
 .home-float{position:fixed;right:20px;bottom:88px;z-index:90;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:999px;background:#fff;color:#073042;font-size:14px;font-weight:500;box-shadow:0 14px 34px -12px rgba(4,28,38,.6);transition:transform .5s var(--ease-elastic),background .4s,color .4s}
 .home-float:hover{background:#073042;color:#fff;transform:translateY(-3px)}
@@ -328,7 +330,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
   <!-- HEADER: logo à esquerda, links ao centro, redes à direita -->
   <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
     <div class="relative flex items-center justify-between px-4 md:px-4 py-4">
-      <a href="#" aria-label="Hanaoka PureLab" class="reveal shrink-0"><img src="hanaoka-purelab-logo-white.webp" alt="Hanaoka PureLab" class="h-10 w-auto self-start"></a>
+      <a href="#" aria-label="Hanaoka PureLab" class="reveal shrink-0"><img src="hanaoka-purelab-logo-white.webp" alt="Hanaoka PureLab" class="h-10 w-auto"></a>
       <nav aria-label="Principal" class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
         <a class="nav-link" href="#produtos">Reagentes</a>
         <a class="nav-link" href="#qualidade">Qualidade</a>
@@ -551,7 +553,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
 
 <footer class="bg-[#041C26] text-white/70 py-12">
   <div class="mx-auto max-w-[1400px] px-5 md:px-10 flex flex-col md:flex-row gap-8 md:items-center md:justify-between">
-    <img src="hanaoka-purelab-logo-white.webp" alt="Hanaoka PureLab" class="h-10 w-auto">
+    <img src="hanaoka-purelab-logo-white.webp" alt="Hanaoka PureLab" class="h-7 md:h-10 w-auto self-start">
     <nav aria-label="Rodapé" class="flex flex-wrap gap-x-8 gap-y-3 text-sm">
       <a href="#produtos">Produtos</a><a href="#aplicacoes">Laticínios</a><a href="#qualidade">Qualidade</a><a href="#contato">Contato</a>
     </nav>
@@ -729,6 +731,24 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
   if(!matchMedia("(hover: none)").matches) return;
   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("shim-go"); io.unobserve(e.target) } }) },{threshold:.5});
   document.querySelectorAll(".shim").forEach(function(el){ io.observe(el) });
+})();
+</script>
+<script>
+// vídeos: se o navegador bloquear a reprodução automática (economia de bateria ou modo baixo consumo), mostra um botão para tocar
+(function(){
+  document.querySelectorAll("video").forEach(function(v){
+    var box=v.parentElement;
+    var tryPlay=function(){ var p=v.play(); if(p&&p.catch) p.catch(function(){ showTap() }) };
+    var showTap=function(){
+      if(box.querySelector(".vid-tap")) return;
+      var b=document.createElement("button");
+      b.type="button"; b.className="vid-tap"; b.setAttribute("aria-label","Reproduzir vídeo");
+      b.innerHTML="&#9654;";
+      b.addEventListener("click",function(){ v.muted=true; v.play().then(function(){ b.remove() }).catch(function(){}) });
+      box.appendChild(b);
+    };
+    if(v.autoplay) tryPlay();
+  });
 })();
 </script>
 </body>
