@@ -227,7 +227,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
 .pinfo{flex:none}
 #ptrack{padding-left:calc(50vw - min(max(280px,30vw),460px)/2);padding-right:calc(50vw - min(max(280px,30vw),460px)/2)}
 @media(max-width:767px){.pcard{width:78vw;min-width:260px}#ptrack{padding-left:11vw;padding-right:11vw}}
-@media(prefers-reduced-motion:reduce){#produtos{height:auto!important}#produtos>div{position:relative;height:auto;padding:96px 0}#ptrack{transform:none!important;overflow-x:auto}}
+@media(prefers-reduced-motion:reduce) and (max-width:0px){#produtos{height:auto!important}#produtos>div{position:relative;height:auto;padding:96px 0}#ptrack{transform:none!important;overflow-x:auto}}
 
 /* botões flutuantes saem quando o rodapé aparece, para não cobrir os links */
 .wa-float,.home-float{transition:transform .5s var(--ease-elastic),background .4s,color .4s,opacity .4s,visibility .4s}
@@ -266,7 +266,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
 .mq span{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.82);white-space:nowrap;padding:0 26px}
 .mq i{font-style:normal;color:var(--aqua-300);font-size:12px}
-@media(prefers-reduced-motion:reduce){.rv-s{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce) and (max-width:0px){.rv-s{opacity:1;transform:none}}
 @media(min-width:1024px){.col-r{padding-top:clamp(0px,16vh,220px)}}
 
 /* celular: títulos quebram linha, textos cabem na tela e produtos viram carrossel com rolagem lateral */
@@ -285,7 +285,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
   #produtos .pimg img{height:90%}
   #produtos .pinfo h3{font-size:1.4rem}
 }
-@media(prefers-reduced-motion:reduce){
+@media(prefers-reduced-motion:reduce) and (max-width:0px){
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
  .reveal,.mask>span{opacity:1;transform:none;filter:none}
 }
@@ -568,7 +568,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
 <script>
 // loader: 3 segundos, depois a página ganha cor e a hero entra do preto
 (function(){
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce=false;
   var root=document.documentElement, loader=document.getElementById('loader');
   var wait=reduce?600:3000;
   setTimeout(function(){
@@ -582,7 +582,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
 // vídeo: reprodução muda; respeita economia de dados e movimento reduzido
 (function(){
   var v=document.querySelector('.hero video'); if(!v) return;
-  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rm=false;
   if(rm){v.remove();return}
   v.muted=true; var p=v.play(); if(p&&p.catch)p.catch(function(){});
   document.addEventListener('visibilitychange',function(){document.hidden?v.pause():v.play().catch(function(){})});
@@ -596,7 +596,7 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
 <script>
 // efeitos: poeira luminosa, cursor glow e flashlight dos cartões (desligados com reduzir movimento)
 (function(){
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce=false;
   var hero=document.querySelector('.hero');
   var c=document.getElementById('dust');
   if(c&&!reduce){
@@ -642,7 +642,7 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
 <script>
 // seções: cabeçalho ao rolar, revelação, paralaxe e vídeos só quando visíveis
 (function(){
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce=false;
   var header=document.getElementById('site-header');
   var onScroll=function(){ header.classList.toggle('scrolled', scrollY>40) };
   addEventListener('scroll',onScroll,{passive:true}); onScroll();
@@ -673,7 +673,7 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
 // produtos: o trilho anda na horizontal conforme a rolagem; o card no centro cresce
 (function(){
   var sec=document.getElementById('produtos'), track=document.getElementById('ptrack'), bar=document.getElementById('pbar');
-  if(!sec||!track||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!sec||!track||false) return;
   var cards=[].slice.call(track.querySelectorAll('.pcard'));
   var ticking=false;
   var upd=function(){
@@ -686,7 +686,7 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
     var half=innerWidth/2;
     cards.forEach(function(c){
       var b=c.getBoundingClientRect(), d=Math.min(1,Math.abs(b.left+b.width/2-half)/half);
-      c.style.setProperty('--s',(1.2-d*0.35).toFixed(3));c.style.setProperty('--o',(1-d*0.6).toFixed(3));
+      c.style.setProperty('--s',(innerWidth<768?(1.04-d*0.14):(1.2-d*0.35)).toFixed(3));c.style.setProperty('--o',(1-d*0.6).toFixed(3));
     });
   };
   addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(upd) } },{passive:true});
@@ -696,7 +696,7 @@ document.querySelectorAll('[data-magnetic]').forEach(function(el){
 <script>
 // efeitos de texto: revelação com máscara e slide de letras ao entrar na tela
 (function(){
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce=false;
   var targets=[].slice.call(document.querySelectorAll('[data-reveal-text],.text-clip-anim'));
   if(reduce){ targets.forEach(function(el){ el.classList.add('reveal-active','go') }); return }
   var io=new IntersectionObserver(function(es){ es.forEach(function(e){
