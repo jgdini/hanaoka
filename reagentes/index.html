@@ -236,6 +236,14 @@ html.is-loading .hero *{animation-play-state:paused!important}
 .halo-sym{transition:transform .8s var(--ease-out)}
 .vid-tap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;width:64px;height:64px;border-radius:999px;border:1px solid rgba(255,255,255,.7);background:rgba(4,28,38,.55);color:#fff;font-size:20px;display:grid;place-items:center;backdrop-filter:blur(8px);cursor:pointer}
 .vid-tap:hover{background:#fff;color:#073042}
+/* celular: vídeo vertical na altura da tela, título e botão no pé da primeira tela */
+@media(max-width:767px){
+  .hero video,.hero .poster{height:100svh;bottom:auto;-webkit-mask-image:linear-gradient(#000 82%,transparent);mask-image:linear-gradient(#000 82%,transparent)}
+  .overlay{background:linear-gradient(180deg,rgba(4,28,38,.45) 0%,rgba(4,28,38,.08) 14%,rgba(4,28,38,.08) 52%,rgba(4,28,38,.75) 66%,rgba(4,28,38,.96) 82%,#041C26 100%)}
+  .cols{padding-top:63svh!important}
+  .h1{font-size:clamp(1.9rem,9vw,2.6rem)!important}
+  .col-r .cta-wrap{margin-top:1.25rem}
+}
 /* botão Início, acima do WhatsApp */
 .home-float{position:fixed;right:20px;bottom:88px;z-index:90;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 14px;border-radius:999px;background:#fff;color:#073042;font-size:14px;font-weight:500;box-shadow:0 14px 34px -12px rgba(4,28,38,.6);transition:transform .5s var(--ease-elastic),background .4s,color .4s}
 .home-float:hover{background:#073042;color:#fff;transform:translateY(-3px)}
@@ -584,6 +592,7 @@ html.is-loading .hero *{animation-play-state:paused!important}
   var v=document.querySelector('.hero video'); if(!v) return;
   var rm=false;
   if(rm){v.remove();return}
+  if(innerWidth<768){ var src=v.querySelector('source'); if(src) src.src='media/hero-mobile.mp4'; v.poster='media/hero-mobile-poster.webp'; var pi=document.querySelector('.hero .poster'); if(pi) pi.src='media/hero-mobile-poster.webp'; v.load(); }
   v.muted=true; var p=v.play(); if(p&&p.catch)p.catch(function(){});
   document.addEventListener('visibilitychange',function(){document.hidden?v.pause():v.play().catch(function(){})});
 })();
